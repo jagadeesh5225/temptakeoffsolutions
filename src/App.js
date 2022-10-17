@@ -20,12 +20,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions, Chip, TextField } from "@mui/material";
 import { Button, Card, Grid, Avatar } from "@mui/material";
-import {
-  AiOutlineTwitter,
-  AiFillLinkedin,
-  AiFillFacebook,
-  AiFillInstagram,
-} from "react-icons/ai";
 import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 import {
   FaFacebookF,
@@ -34,7 +28,6 @@ import {
   FaTwitter,
   FaPhoneAlt,
 } from "react-icons/fa";
-import { FiPhone, FiMail } from "react-icons/fi";
 
 import { services, industries, training } from "./Content/index";
 
@@ -549,7 +542,7 @@ function App() {
                 color: "#252B5D",
                 fontSize: "2rem",
                 fontWeight: "500",
-                marginBottom: "0",
+                marginBottom: "2rem",
               }}
             >
               Get in Touch
@@ -586,7 +579,7 @@ function App() {
                 <FaPhoneAlt
                   style={{ marginRight: "5px" }}
                   size={18}
-                  color="#1052ba"
+                  color="#252B5D"
                 />
                 +91 8088853145
               </p>
@@ -602,7 +595,7 @@ function App() {
                   color: "#000",
                 }}
               >
-                <IoMdMail style={{ marginRight: "5px" }} color="#1052ba" />
+                <IoMdMail style={{ marginRight: "5px" }} color="#252B5D" />
                 info@totspl.com
               </p>
             </a>
