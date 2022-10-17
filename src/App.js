@@ -195,6 +195,7 @@ function App() {
         </div>
         {/* menu */}
         <div
+          id="home"
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -213,66 +214,76 @@ function App() {
               alignItems: "center",
             }}
           >
-            <p
-              className="menuHover"
-              style={{
-                margin: 0,
-                color: "#252B5D",
-                fontSize: "1.2rem",
-                marginRight: "1rem",
-                fontWeight: 500,
-              }}
-            >
-              Home
-            </p>
-            <p
-              className="menuHover"
-              style={{
-                margin: 0,
-                color: "#252B5D",
-                fontSize: "1.2rem",
-                marginRight: "1rem",
-                fontWeight: 500,
-              }}
-            >
-              Services
-            </p>
-            <p
-              className="menuHover"
-              style={{
-                margin: 0,
-                color: "#252B5D",
-                fontSize: "1.2rem",
-                marginRight: "1rem",
-                fontWeight: 500,
-              }}
-            >
-              Training
-            </p>
-            <p
-              className="menuHover"
-              style={{
-                margin: 0,
-                color: "#252B5D",
-                fontSize: "1.2rem",
-                marginRight: "1rem",
-                fontWeight: 500,
-              }}
-            >
-              About Us
-            </p>
-            <p
-              className="menuHover"
-              style={{
-                margin: 0,
-                color: "#252B5D",
-                fontSize: "1.2rem",
-                marginRight: "1rem",
-                fontWeight: 500,
-              }}
-            >
-              Contact Us
-            </p>
+            <a style={{ textDecoration: "none" }} href="#home">
+              <p
+                className="menuHover"
+                style={{
+                  margin: 0,
+                  color: "#252B5D",
+                  fontSize: "1.2rem",
+                  marginRight: "1rem",
+                  fontWeight: 500,
+                }}
+              >
+                Home
+              </p>
+            </a>
+            <a style={{ textDecoration: "none" }} href="#service">
+              <p
+                className="menuHover"
+                style={{
+                  margin: 0,
+                  color: "#252B5D",
+                  fontSize: "1.2rem",
+                  marginRight: "1rem",
+                  fontWeight: 500,
+                }}
+              >
+                Services
+              </p>
+            </a>
+            <a style={{ textDecoration: "none" }} href="#training">
+              <p
+                className="menuHover"
+                style={{
+                  margin: 0,
+                  color: "#252B5D",
+                  fontSize: "1.2rem",
+                  marginRight: "1rem",
+                  fontWeight: 500,
+                }}
+              >
+                Training
+              </p>
+            </a>
+            <a style={{ textDecoration: "none" }} href="#about">
+              <p
+                className="menuHover"
+                style={{
+                  margin: 0,
+                  color: "#252B5D",
+                  fontSize: "1.2rem",
+                  marginRight: "1rem",
+                  fontWeight: 500,
+                }}
+              >
+                About Us
+              </p>
+            </a>
+            <a style={{ textDecoration: "none" }} href="#contact">
+              <p
+                className="menuHover"
+                style={{
+                  margin: 0,
+                  color: "#252B5D",
+                  fontSize: "1.2rem",
+                  marginRight: "1rem",
+                  fontWeight: 500,
+                }}
+              >
+                Contact Us
+              </p>
+            </a>
             <Button
               size="large"
               color="secondary"
@@ -344,6 +355,7 @@ function App() {
         </div>
         {/* services */}
         <div
+          id="service"
           style={{
             // backgroundColor: "rgba(37,43,93,0.1)",
             padding: "1rem",
@@ -396,6 +408,7 @@ function App() {
 
         {/* training */}
         <div
+          id="training"
           style={{
             // backgroundColor: "rgba(118,89,255,0.1)",
             padding: "1rem",
@@ -467,7 +480,7 @@ function App() {
         {/* Join community */}
         <div style={{ margin: "1rem", marginBottom: "2rem" }}></div>
         {/* about us */}
-        <div style={{ margin: "1rem", marginBottom: "2rem" }}>
+        <div id="about" style={{ margin: "1rem", marginBottom: "2rem" }}>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <p
               style={{
@@ -515,6 +528,7 @@ function App() {
         </div>
         {/* contact us */}
         <div
+          id="contact"
           style={{
             display: "flex",
             justifyContent: "space-between",
