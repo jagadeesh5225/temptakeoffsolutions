@@ -284,7 +284,7 @@ function App() {
           </div>
         </div>
         {/* landing page */}
-        <div>
+        <div style={{ marginTop: "10rem" }}>
           <img src={lplan} alt="" style={{ width: "100%" }} />
         </div>
         {/* industries */}
