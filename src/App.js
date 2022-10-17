@@ -21,6 +21,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions, Chip, TextField } from "@mui/material";
 import { Button, Card, Grid, Avatar } from "@mui/material";
 import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
+import { MdSettings } from "react-icons/md";
 import {
   FaFacebookF,
   FaInstagram,
@@ -249,20 +250,6 @@ function App() {
                 Training
               </p>
             </a>
-            <a style={{ textDecoration: "none" }} href="#about">
-              <p
-                className="menuHover"
-                style={{
-                  margin: 0,
-                  color: "#252B5D",
-                  fontSize: "1.2rem",
-                  marginRight: "1rem",
-                  fontWeight: 500,
-                }}
-              >
-                About Us
-              </p>
-            </a>
             <a style={{ textDecoration: "none" }} href="#contact">
               <p
                 className="menuHover"
@@ -277,6 +264,21 @@ function App() {
                 Contact Us
               </p>
             </a>
+            <a style={{ textDecoration: "none" }} href="#about">
+              <p
+                className="menuHover"
+                style={{
+                  margin: 0,
+                  color: "#252B5D",
+                  fontSize: "1.2rem",
+                  marginRight: "1rem",
+                  fontWeight: 500,
+                }}
+              >
+                About Us
+              </p>
+            </a>
+
             <Button
               size="large"
               color="secondary"
@@ -365,42 +367,51 @@ function App() {
             Services
           </p>
 
-          <Grid container spacing={8}>
+          {/* <div
+            style={{
+              //border: "2px solid #252B5D",
+              color: "#fff",
+
+              //height: "50vh",
+              display: "flex",
+              flexDirection: "column",
+              width: "max-content",
+            }}
+          >
             {services?.map((item, ii) => (
-              <Grid item xs={6} key={ii} spacing={4}>
-                <Card>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="200"
-                      image={
-                        item?.image === "staffing"
-                          ? staffing
-                          : item?.image === "repaire"
-                          ? repaire
-                          : item?.image === "documentation"
-                          ? documentation
-                          : engineer
-                      }
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        {item?.title}
-                      </Typography>
-                      <Typography variant="subtitle1" color="text.secondary">
-                        {item?.content}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  padding: "1.4rem",
+                  backgroundColor: "#252B5D",
+                  color: "#fff",
+                  borderTopLeftRadius: ii === 0 ? "2rem" : 0,
+                  borderBottomLeftRadius:
+                    ii === services?.length - 1 ? "2rem" : 0,
+                }}
+              >
+                <MdSettings size={16} style={{ marginRight: "5px" }} />
+                <p style={{ fontSize: "1rem", margin: 0 }}>{item?.title}</p>
+              </div>
+            ))}
+          </div> */}
+          {/* 
+          <Grid container spacing={3}>
+            {services?.map((item, ii) => (
+              <Grid item xs={4} key={ii} spacing={4}>
+                <div style={{ display: "flex", justifyContent: "flex-start" }}>
+                  <MdSettings size={25} style={{ marginRight: "5px" }} />
+                  <p style={{ fontSize: "1.3rem", margin: 0 }}>{item?.title}</p>
+                 <div>{item?.content}</div> 
+                </div>
               </Grid>
             ))}
-          </Grid>
+          </Grid> */}
         </div>
 
         {/* training */}
-        <div
+        {/* <div
           id="training"
           style={{
             // backgroundColor: "rgba(118,89,255,0.1)",
@@ -423,7 +434,7 @@ function App() {
               <Grid item xs={4} key={ii} spacing={4}>
                 <Card style={{}}>
                   <CardActionArea>
-                    {/* <CardMedia
+                     <CardMedia
                       component="img"
                       height="160"
                       image={
@@ -436,7 +447,7 @@ function App() {
                           : engineer
                       }
                       alt="green iguana"
-                    /> */}
+                    />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
                         {item?.title}
@@ -469,7 +480,7 @@ function App() {
               </Grid>
             ))}
           </Grid>
-        </div>
+        </div> */}
         {/* Join community */}
         <div style={{ margin: "1rem", marginBottom: "2rem" }}></div>
         {/* about us */}
@@ -488,7 +499,7 @@ function App() {
                 borderTopLeftRadius: "4rem",
               }}
             >
-              Who are we?
+              About Us
             </p>
           </div>
           <div
