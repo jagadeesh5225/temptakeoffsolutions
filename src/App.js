@@ -1,36 +1,70 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import React, { useState, useEffect } from "react";
-import logot from "./assests/img/logot.png";
-import logo from "./assests/img/logo.png";
 import lplan from "./assests/img/lplane.png";
 import logowater from "./assests/img/logowater.png";
-
-import engineer from "./assests/img/services/engineer.png";
-import repaire from "./assests/img/services/repaire.png";
-import documentation from "./assests/img/services/documentation.png";
-import staffing from "./assests/img/services/staffing.png";
-import aero from "./assests/img/industry/aero.png";
-import auto from "./assests/img/industry/auto.png";
-import defence from "./assests/img/industry/defence.png";
-import oil from "./assests/img/industry/oil.png";
-
+import aboutimg from "./assests/img/about.png";
 import "./app.css";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea, CardActions, Chip, TextField } from "@mui/material";
-import { Button, Card, Grid, Avatar } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
-import { MdSettings } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
+  FaFileAlt,
   FaTwitter,
   FaPhoneAlt,
+  FaPlaneDeparture,
+  FaBriefcase,
+  FaUserTie,
 } from "react-icons/fa";
+import { color } from "@mui/system";
 
-import { services, industries, training } from "./Content/index";
+const Aircraft = () => {
+  return <div></div>;
+};
+const Internship = () => {
+  return (
+    <div>
+      <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
+        <FaUserTie style={{ marginRight: 10 }} />
+        Internship
+      </p>
+      <p>
+        Takeoff offers a platform to develop ready to deploy skills through our
+        outcome driven internship and certification programmes crafted by
+        industry experts to build your expertise and make you Industry ready.
+        Join our programme to gain real time industry experience, learn from
+        experienced mentors and takeoff your career.
+      </p>
+      <p>
+        We are offering internship and certification programmes for Engineering
+        graduates and aircraft Maintenance Engineers in technical writing,
+        aircraft Maintenance and helicopter maintenance. For more details
+        contact us or drop your resume to{" "}
+        <a href="#contact">
+          <span
+            style={{
+              textDecoration: "underline",
+              color: "#770C20",
+              fontWeight: "500",
+              cursor: "pointer",
+            }}
+          >
+            hr@totspl.com
+          </span>
+        </a>
+        .
+      </p>
+    </div>
+  );
+};
+const Recruit = () => {
+  return <div></div>;
+};
+const TechnicalPub = () => {
+  return <div></div>;
+};
 
 function App() {
   const theme = createTheme({
@@ -41,59 +75,11 @@ function App() {
     },
   });
 
-  const [contactform, setcontactform] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    phone: "",
-    comment: "",
-  });
-  const [disabledcontact, setdisabledcontact] = useState(false);
-
-  const handleChange = (e) => {
-    const { value, name } = e.target;
-
-    if (name === "phone" && value?.length > 10) {
-      return;
-    }
-
-    setcontactform((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmitContact = () => {
-    setcontactform({});
-  };
-  useEffect(() => {
-    if (!contactform?.firstname) {
-      setdisabledcontact(true);
-      return;
-    }
-    if (!contactform?.lastname) {
-      setdisabledcontact(true);
-      return;
-    }
-
-    const validateEmail = (email) => {
-      return String(email)
-        .toLowerCase()
-        .match(
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-    };
-    if (!contactform?.email || !validateEmail(contactform?.email)) {
-      setdisabledcontact(true);
-      return;
-    }
-    if (!contactform?.phone || contactform?.phone?.length < 10) {
-      setdisabledcontact(true);
-      return;
-    }
-    setdisabledcontact(false);
-  }, [contactform]);
+  const [page, setpage] = useState(1);
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ padding: "1rem 10rem" }}>
+      <div style={{ padding: "1rem 10rem" }} className="fullpage">
         {/* social */}
         <div
           style={{
@@ -193,13 +179,12 @@ function App() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center",
           }}
         >
           <img
-            src={logot}
+            src={logowater}
             alt="Takeoff Techno Solutions"
-            style={{ width: 200 }}
+            style={{ width: 120 }}
           />
           <div
             style={{
@@ -247,7 +232,22 @@ function App() {
                   fontWeight: 500,
                 }}
               >
-                Training
+                Career
+              </p>
+            </a>
+
+            <a style={{ textDecoration: "none" }} href="#about">
+              <p
+                className="menuHover"
+                style={{
+                  margin: 0,
+                  color: "#252B5D",
+                  fontSize: "1.2rem",
+                  marginRight: "1rem",
+                  fontWeight: 500,
+                }}
+              >
+                About Us
               </p>
             </a>
             <a style={{ textDecoration: "none" }} href="#contact">
@@ -264,423 +264,475 @@ function App() {
                 Contact Us
               </p>
             </a>
-            <a style={{ textDecoration: "none" }} href="#about">
-              <p
-                className="menuHover"
-                style={{
-                  margin: 0,
-                  color: "#252B5D",
-                  fontSize: "1.2rem",
-                  marginRight: "1rem",
-                  fontWeight: 500,
-                }}
-              >
-                About Us
-              </p>
-            </a>
 
-            <Button
+            {/* <Button
               size="large"
               color="secondary"
               variant="contained"
               style={{ borderRadius: "2rem" }}
             >
               Join Us
-            </Button>
+            </Button> */}
           </div>
         </div>
         {/* landing page */}
-        <div style={{ marginTop: "10rem" }}>
+        <div style={{ margin: "10rem" }}>
           <img src={lplan} alt="" style={{ width: "100%" }} />
         </div>
-        {/* industries */}
-        <div
-          style={{
-            marginBottom: "3rem",
-            backgroundColor: "#252B5D",
-            padding: "3px",
-            borderRadius: "8px",
-          }}
-        >
-          <p
-            style={{
-              textAlign: "center",
-              color: "#fff",
-              fontSize: "1.6rem",
-            }}
-          >
-            We serve you!
-          </p>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              alignItems: "center",
-              color: "#fff",
-              marginBottom: "10px",
-            }}
-          >
-            {industries?.map((item, ii) => (
-              <div
-                key={ii}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  fontSize: "1.2rem",
-                }}
-              >
-                <Avatar
-                  sx={{ width: 60, height: 60 }}
-                  alt={item?.title}
-                  src={
-                    item?.image === "aero"
-                      ? aero
-                      : item?.image === "auto"
-                      ? auto
-                      : item?.image === "defence"
-                      ? defence
-                      : oil
-                  }
-                  style={{ marginRight: "10px" }}
-                />
-                {item?.title}
-              </div>
-            ))}
-          </div>
-        </div>
+
         {/* services */}
         <div
           id="service"
           style={{
             // backgroundColor: "rgba(37,43,93,0.1)",
             padding: "1rem",
-            marginBottom: "3rem",
+            marginBottom: "6rem",
             borderRadius: "8px",
           }}
         >
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: "2rem",
-            }}
+          <h1
+            style={{ color: "#e4e4e4", fontSize: "3rem", textAlign: "center" }}
           >
             Services
-          </p>
-
-          {/* <div
+          </h1>
+          <div
             style={{
-              //border: "2px solid #252B5D",
-              color: "#fff",
-
-              //height: "50vh",
               display: "flex",
-              flexDirection: "column",
-              width: "max-content",
+              justifyContent: "space-between",
             }}
           >
-            {services?.map((item, ii) => (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                flexDirection: "column",
+                width: "100%",
+                height: "80vh",
+              }}
+            >
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  padding: "1.4rem",
-                  backgroundColor: "#252B5D",
-                  color: "#fff",
-                  borderTopLeftRadius: ii === 0 ? "2rem" : 0,
-                  borderBottomLeftRadius:
-                    ii === services?.length - 1 ? "2rem" : 0,
+                  borderTopLeftRadius: 50,
+                  borderBottom: "1px #d9d9d9 solid",
+                  padding: "1rem",
+                  boxShadow: "10px 10px 21px 6px rgba(232, 238, 248, 0.75)",
+                  cursor: "pointer",
+                  backgroundColor: page === 1 ? "#002366" : "#f3f6fc",
+                  color: page === 1 ? "#fff" : "#000",
+                }}
+                onClick={() => setpage(1)}
+              >
+                <p
+                  style={{
+                    fontSize: "1.4rem",
+                    color: page === 1 ? "#fff" : "#002366",
+                    fontWeight: "500",
+                  }}
+                >
+                  <FaPlaneDeparture style={{ marginRight: 10 }} />
+                  Aircraft Management & Maintenance
+                </p>
+                <p style={{ lineHeight: "2rem" }}>
+                  Takeoff strives to understand your needs and develop
+                  cost-effective outsourcing solutions for managing &
+                  maintaining your aircraft
+                </p>
+                {page === 1 ? null : (
+                  <p
+                    style={{
+                      textAlign: "right",
+                      color: "#0F52BA",
+                      margin: 0,
+                      fontWeight: "500",
+                    }}
+                  >
+                    Read More...
+                  </p>
+                )}
+              </div>
+              <div
+                onClick={() => setpage(2)}
+                style={{
+                  borderBottom: "1px #d9d9d9 solid",
+                  padding: "1rem",
+                  boxShadow: "10px 10px 21px 6px rgba(232, 238, 248, 0.75)",
+                  cursor: "pointer",
+                  backgroundColor: page === 2 ? "#002366" : "#f3f6fc",
+                  color: page === 2 ? "#fff" : "#000",
                 }}
               >
-                <MdSettings size={16} style={{ marginRight: "5px" }} />
-                <p style={{ fontSize: "1rem", margin: 0 }}>{item?.title}</p>
+                <p
+                  style={{
+                    fontSize: "1.4rem",
+                    color: page === 2 ? "#fff" : "#002366",
+                    fontWeight: "500",
+                  }}
+                >
+                  <FaUserTie style={{ marginRight: 10 }} />
+                  Internship
+                </p>
+                <p>Chance to learn from the professional mentors</p>
+                {page === 2 ? null : (
+                  <p
+                    style={{
+                      textAlign: "right",
+                      color: "#0F52BA",
+                      margin: 0,
+                      fontWeight: "500",
+                    }}
+                  >
+                    Read More...
+                  </p>
+                )}
               </div>
-            ))}
-          </div> */}
-          {/* 
-          <Grid container spacing={3}>
-            {services?.map((item, ii) => (
-              <Grid item xs={4} key={ii} spacing={4}>
-                <div style={{ display: "flex", justifyContent: "flex-start" }}>
-                  <MdSettings size={25} style={{ marginRight: "5px" }} />
-                  <p style={{ fontSize: "1.3rem", margin: 0 }}>{item?.title}</p>
-                 <div>{item?.content}</div> 
-                </div>
-              </Grid>
-            ))}
-          </Grid> */}
+              <div
+                onClick={() => setpage(3)}
+                style={{
+                  borderBottom: "1px #d9d9d9 solid",
+                  padding: "1rem",
+                  boxShadow: "10px 10px 21px 6px rgba(232, 238, 248, 0.75)",
+                  cursor: "pointer",
+                  backgroundColor: page === 3 ? "#002366" : "#f3f6fc",
+                  color: page === 3 ? "#fff" : "#000",
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: "1.4rem",
+                    color: page === 3 ? "#fff" : "#002366",
+                    fontWeight: "500",
+                  }}
+                >
+                  <FaBriefcase style={{ marginRight: 10 }} />
+                  Recruitment and staffing
+                </p>
+                <p style={{ lineHeight: "2rem" }}>
+                  Takeoff provides flexible, efficient, and cost-effective
+                  workforce solutions to meet client's workforce requirements
+                </p>
+                {page === 3 ? null : (
+                  <p
+                    style={{
+                      textAlign: "right",
+                      color: "#0F52BA",
+                      margin: 0,
+                      fontWeight: "500",
+                    }}
+                  >
+                    Read More...
+                  </p>
+                )}
+              </div>
+              <div
+                onClick={() => setpage(4)}
+                style={{
+                  borderBottomLeftRadius: 50,
+                  padding: "1rem",
+                  boxShadow: "10px 10px 21px 6px rgba(232, 238, 248, 0.75)",
+                  cursor: "pointer",
+                  backgroundColor: page === 4 ? "#002366" : "#f3f6fc",
+                  color: page === 4 ? "#fff" : "#000",
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: "1.4rem",
+                    color: page === 4 ? "#fff" : "#002366",
+                    fontWeight: "500",
+                  }}
+                >
+                  <FaFileAlt style={{ marginRight: 6 }} /> Technical Publication
+                </p>
+                <p>We design, develop and document your product</p>
+                {page === 4 ? null : (
+                  <p
+                    style={{
+                      textAlign: "right",
+                      color: "#0F52BA",
+                      margin: 0,
+                      fontWeight: "500",
+                    }}
+                  >
+                    Read More...
+                  </p>
+                )}
+              </div>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                height: "80vh",
+                padding: "2rem",
+                overflowY: "auto",
+                boxShadow: "10px 10px 21px 6px rgba(232, 238, 248, 0.75)",
+                borderTopRightRadius: 50,
+                borderBottomRightRadius: 50,
+                lineHeight: "2rem",
+              }}
+            >
+              {page === 1 ? (
+                <Aircraft />
+              ) : page === 2 ? (
+                <Internship />
+              ) : page === 3 ? (
+                <Recruit />
+              ) : (
+                <TechnicalPub />
+              )}
+            </div>
+          </div>
         </div>
 
-        {/* training */}
-        {/* <div
-          id="training"
+        {/* Career */}
+        <div
+          id="about"
           style={{
-            // backgroundColor: "rgba(118,89,255,0.1)",
+            marginBottom: "6rem",
+            margin: "1rem",
             padding: "1rem",
-            marginBottom: "3rem",
             borderRadius: "8px",
           }}
         >
-          <p
-            style={{
-              textAlign: "center",
-              marginBottom: "2rem",
-              fontSize: "2rem",
-            }}
-          >
-            Training
+          <h1 style={{ color: "#e4e4e4", fontSize: "3rem" }}>Career</h1>
+
+          <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
+            TAKEOFF YOUR CAREER WITH US!
           </p>
-          <Grid container spacing={4}>
-            {training?.map((item, ii) => (
-              <Grid item xs={4} key={ii} spacing={4}>
-                <Card style={{}}>
-                  <CardActionArea>
-                     <CardMedia
-                      component="img"
-                      height="160"
-                      image={
-                        item?.image === "staffing"
-                          ? staffing
-                          : item?.image === "repaire"
-                          ? repaire
-                          : item?.image === "documentation"
-                          ? documentation
-                          : engineer
-                      }
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        {item?.title}
-                      </Typography>
-                      {item?.tag?.map((tagi, it) => (
-                        <Chip
-                          size="small"
-                          label={tagi}
-                          key={it}
-                          variant="outlined"
-                          color="secondary"
-                          style={{ marginRight: "5px", marginBottom: "5px" }}
-                        />
-                      ))}
-                      <Typography variant="subtitle1" color="text.secondary">
-                        {item?.content}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button
-                      color="primary"
-                      variant="contained"
-                      style={{ borderRadius: "2rem" }}
-                    >
-                      Apply Now
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </div> */}
-        {/* Join community */}
-        <div style={{ margin: "1rem", marginBottom: "2rem" }}></div>
-        {/* about us */}
-        <div id="about" style={{ margin: "1rem", marginBottom: "2rem" }}>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <p
-              style={{
-                fontSize: "2rem",
-                textAlign: "center",
-                margin: 0,
-                padding: "10px",
-                backgroundColor: "#252B5D",
-                color: "#fff",
-                width: 300,
-                borderTopRightRadius: "4rem",
-                borderTopLeftRadius: "4rem",
-              }}
+          <p style={{ fontSize: "1.1rem", lineHeight: "2rem" }}>
+            Join us in one of our full time roles and see how you can takeoff
+            your career to new heights. Stay connected to us about the current
+            opportunities in technical writing and aircraft maintenance so that
+            we can reach out to you.
+          </p>
+          <a href="#contact">
+            <Button
+              variant="contained"
+              size="large"
+              style={{ borderRadius: 20 }}
             >
-              About Us
-            </p>
-          </div>
+              Drop Us Email
+            </Button>
+          </a>
+        </div>
+        {/* about us */}
+        <div
+          id="about"
+          style={{
+            marginBottom: "5rem",
+            margin: "1rem",
+            padding: "1rem",
+            borderRadius: "8px",
+          }}
+        >
+          <h1
+            style={{ color: "#e4e4e4", fontSize: "3rem", textAlign: "center" }}
+          >
+            ABOUT US
+          </h1>
           <div
             style={{
-              border: "2px solid #252B5D",
-              padding: "1rem",
-              borderRadius: "8px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <img src={logo} alt="" />
+            <img src={aboutimg} alt="" width={400} />
+            <div style={{ fontSize: "1.1rem", lineHeight: "2rem" }}>
+              <p>
+                TakeOff Techno Solutions Pvt. Ltd (TOTSPL) is an aviation
+                Services Company founded in 2017 by a team of experienced
+                aviation specialists, providing a wide range of solutions
+                ranging from technical documentation, Aircraft Maintenance and
+                repair, Aircraft Management, Training solutions for airlines and
+                AME Training Schools.
+              </p>
+              <p>
+                Our talent pool includes technical authors, illustrators,
+                Information Architects and Aircraft Maintenance Engineers have
+                extensive experience in delivering projects and products that
+                are globally spread with varied programme guidelines, standards
+                and compliance needs. Our goal is to provide the innovative,
+                flexible and cost effective solutions to meet our client's
+                requirements.
+              </p>
+              <p>
+                We provide consulting and outsourcing services, in which we
+                support our customers in projects, skills and manpower, both
+                in-house and offshore.
+              </p>
             </div>
-            <p style={{ fontSize: "1.2rem" }}>
-              TakeOff Techno Solutions Pvt. Ltd. formerly known as TakeOff
-              Aviation provides technical publication and engineering services
-              in the field of aerospace, defense, automobile, and oil & gas
-              industries.
-            </p>
-            <p style={{ fontSize: "1.2rem" }}>
-              We are engineers, technical authors, illustrators, editors, and
-              information architects who have extensive experience in delivering
-              projects that are globally spread with varied program guidelines,
-              standards, and compliance needs. Our goal is to always lower your
-              cost, provide accurate information, help you to increase product
-              sales, and raise customer satisfaction. We provide an outsourcing
-              service, in which we support our customers in projects and skills,
-              both in-house and offshore.
-            </p>
           </div>
         </div>
         {/* contact us */}
         <div
           id="contact"
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "2rem",
+            marginBottom: "6rem",
             margin: "1rem",
-            //  backgroundColor: "#fcfdff",
             padding: "1rem",
             borderRadius: "8px",
           }}
         >
-          <div
+          <h1
+            style={{ color: "#e4e4e4", fontSize: "3rem", textAlign: "right" }}
+          >
+            CONTACT US
+          </h1>
+          <p
             style={{
-              maxWidth: 450,
+              marginBottom: "5rem",
+              textAlign: "right",
+              fontSize: "1.1rem",
+              lineHeight: "2rem",
             }}
           >
-            <p
-              style={{
-                color: "#252B5D",
-                fontSize: "2rem",
-                fontWeight: "500",
-                marginBottom: "2rem",
-              }}
-            >
-              Get in Touch
-            </p>
-            <p style={{ fontSize: "1rem" }}>
-              Contact us today to know how our strategic solutions can help your
-              organisation to takeoff…
-            </p>
-            <p
-              style={{
-                fontSize: "1.4rem",
-                fontWeight: "500",
-                color: "#b8b8b8",
-              }}
-            >
-              Headquarters
-            </p>
-            <p style={{ fontSize: "1.2rem" }}>
-              <span>114, Jakkur,</span>
-              <br />
-              <span>Bangalore, 560064</span>
-            </p>
-            <a href="tel:+918088853145" style={{ textDecoration: "none" }}>
-              <p
-                style={{
-                  fontSize: "1.2rem",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  color: "#000",
-                  textDecoration: "none",
-                }}
-              >
-                <FaPhoneAlt
-                  style={{ marginRight: "5px" }}
-                  size={18}
-                  color="#252B5D"
-                />
-                +91 8088853145
-              </p>
-            </a>
-            <a href="mailto:info@totspl.com" style={{ textDecoration: "none" }}>
-              <p
-                style={{
-                  fontSize: "1.2rem",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  textDecoration: "none",
-                  color: "#000",
-                }}
-              >
-                <IoMdMail style={{ marginRight: "5px" }} color="#252B5D" />
-                info@totspl.com
-              </p>
-            </a>
-          </div>
-          <div>
-            <div>
-              <TextField
-                required
-                size="small"
-                style={{ width: "30vw", marginBottom: "1rem" }}
-                label="First Name"
-                value={contactform?.firstname ? contactform?.firstname : ""}
-                name="firstname"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <TextField
-                required
-                size="small"
-                style={{ width: "30vw", marginBottom: "1rem" }}
-                label="Last Name"
-                value={contactform?.lastname ? contactform?.lastname : ""}
-                name="lastname"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <TextField
-                required
-                size="small"
-                style={{ width: "30vw", marginBottom: "1rem" }}
-                label="Email"
-                value={contactform?.email ? contactform?.email : ""}
-                name="email"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <TextField
-                type={"number"}
-                required
-                size="small"
-                style={{ width: "30vw", marginBottom: "1rem" }}
-                label="Mobile No."
-                value={contactform?.phone ? contactform?.phone : ""}
-                name="phone"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <TextField
-                size="small"
-                style={{ width: "30vw", marginBottom: "1rem" }}
-                label="Comment"
-                multiline
-                rows={3}
-                value={contactform?.comment ? contactform?.comment : ""}
-                name="comment"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <Button
-                disabled={disabledcontact}
-                size="large"
-                color="primary"
-                variant="contained"
-                style={{ width: "30vw" }}
-                onClick={handleSubmitContact}
-              >
-                Submit
-              </Button>
-            </div>
+            Contact us today to know how takeoff stragetic solutions can help
+            your business needs
+          </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Grid container spacing={5}>
+              <Grid item xs={4}>
+                <div
+                  style={{
+                    //boxShadow: "-10px 10px 21px -6px rgba(0,0,0,0.75)",
+                    padding: "1rem",
+                    borderRadius: 8,
+                    // backgroundColor: "#f3f6fc",
+                    height: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div
+                      style={{
+                        marginRight: 10,
+                        backgroundColor: "#e8eef8",
+                        color: "#002366",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: 30,
+                        width: 30,
+                        borderRadius: 30,
+                        boxShadow: "-5px 5px 10px -6px rgba(0,0,0,0.75)",
+                      }}
+                    >
+                      <MdLocationOn size={20} />
+                    </div>
+                    <div style={{ fontSize: "1.2rem", fontWeight: "500" }}>
+                      Address
+                    </div>
+                  </div>
+
+                  <div style={{ marginLeft: "2rem", marginTop: "1rem" }}>
+                    <div style={{ marginBottom: "10px" }}>
+                      Takeoff Techno Solutions Private Limited
+                    </div>
+                    <div style={{ marginBottom: "10px" }}>
+                      #25/25,Jakkur Plantation,Yashodha Nagar
+                    </div>
+                    <div style={{}}>Bengaluru - 560064</div>
+                  </div>
+                </div>
+              </Grid>
+              <Grid item xs={4}>
+                <div
+                  style={{
+                    //boxShadow: "-10px 10px 21px -6px rgba(0,0,0,0.75)",
+                    padding: "1rem",
+                    borderRadius: 8,
+                    // backgroundColor: "#f3f6fc",
+                    height: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div
+                      style={{
+                        marginRight: 10,
+                        backgroundColor: "#e8eef8",
+                        color: "#002366",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: 30,
+                        width: 30,
+                        borderRadius: 30,
+                        boxShadow: "-5px 5px 10px -6px rgba(0,0,0,0.75)",
+                      }}
+                    >
+                      <IoMdMail size={16} />
+                    </div>
+                    <div style={{ fontSize: "1.2rem", fontWeight: "500" }}>
+                      E-mail
+                    </div>
+                  </div>
+
+                  <div style={{ marginLeft: "2rem", marginTop: "1rem" }}>
+                    info@totspl.com
+                  </div>
+                </div>
+              </Grid>
+              <Grid item xs={4}>
+                <div
+                  style={{
+                    // boxShadow: "-10px 10px 21px -6px rgba(0,0,0,0.75)",
+                    padding: "1rem",
+                    borderRadius: 8,
+                    // backgroundColor: "#f3f6fc",
+                    height: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div
+                      style={{
+                        marginRight: 10,
+                        backgroundColor: "#e8eef8",
+                        color: "#002366",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: 30,
+                        width: 30,
+                        borderRadius: 30,
+                        boxShadow: "-5px 5px 10px -6px rgba(0,0,0,0.75)",
+                      }}
+                    >
+                      <FaPhoneAlt size={16} />
+                    </div>
+                    <div style={{ fontSize: "1.2rem", fontWeight: "500" }}>
+                      Contact No.
+                    </div>
+                  </div>
+
+                  <div style={{ marginLeft: "2rem", marginTop: "1rem" }}>
+                    +91 8088853145
+                  </div>
+                </div>
+              </Grid>
+            </Grid>
           </div>
         </div>
       </div>
@@ -688,69 +740,96 @@ function App() {
       <div
         style={{
           backgroundColor: "#252B5D",
-          padding: "1rem 10rem",
-          paddingBottom: "5rem",
+          padding: "1rem 2rem",
+          paddingBottom: "2rem",
           color: "#fff",
+          paddingLeft: "5rem",
+          paddingRight: "5rem",
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div>
             <p style={{ fontSize: "1.4rem" }}>TakeOff Techno Solutions</p>
-            <p style={{ fontSize: "1rem" }}>
-              <span>114, Jakkur,</span>
-              <br />
-              <span>Bangalore, 560064</span>
-            </p>
-            <a href="tel:+918088853145" style={{ textDecoration: "none" }}>
-              <p
-                style={{
-                  fontSize: "1rem",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  color: "#fff",
-                  textDecoration: "none",
-                }}
-              >
-                <FaPhoneAlt
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                marginBottom: "1rem",
+              }}
+            >
+              <div style={{ color: "white" }}>
+                <MdLocationOn
                   style={{ marginRight: "5px" }}
-                  size={16}
-                  color="#fff"
+                  size={20}
+                  color="#e4e4e4"
                 />
-                +91 8088853145
-              </p>
-            </a>
+              </div>
+              <div>
+                <div style={{ marginBottom: "5px" }}>
+                  Takeoff Techno Solutions Private Limited
+                </div>
+                <div style={{ marginBottom: "5px" }}>
+                  #25/25,Jakkur Plantation,Yashodha Nagar
+                </div>
+                <div style={{ marginBottom: "5px" }}>Bengaluru - 560064</div>
+              </div>
+            </div>
             <a href="mailto:info@totspl.com" style={{ textDecoration: "none" }}>
-              <p
+              <div
                 style={{
-                  fontSize: "1rem",
                   display: "flex",
                   justifyContent: "flex-start",
                   alignItems: "center",
-                  textDecoration: "none",
-                  color: "#fff",
+                  marginBottom: "1rem",
                 }}
               >
                 <IoMdMail
-                  size={16}
                   style={{ marginRight: "5px" }}
-                  color="#fff"
+                  size={18}
+                  color="#e4e4e4"
                 />
-                info@totspl.com
-              </p>
+                <div style={{ textDecoration: "none", color: "white" }}>
+                  info@totspl.com
+                </div>
+              </div>
+            </a>
+            <a href="tel:+918088853145" style={{ textDecoration: "none" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  marginBottom: "1rem",
+                  alignItems: "center",
+                }}
+              >
+                <div style={{ color: "white" }}>
+                  <FaPhoneAlt
+                    style={{ marginRight: "5px" }}
+                    size={16}
+                    color="#e4e4e4"
+                  />
+                </div>
+                <div style={{ textDecoration: "none", color: "white" }}>
+                  +91 8088853145
+                </div>
+              </div>
             </a>
           </div>
           <div>
-            <p style={{ fontSize: "1.4rem" }}>Services</p>
+            <p style={{ fontSize: "1.2rem" }}>Industries We Server</p>
             <p style={{ fontSize: "1rem" }}>Aerospace</p>
             <p style={{ fontSize: "1rem" }}>Automotive</p>
-            <p style={{ fontSize: "1rem" }}>Defence</p>
-            <p style={{ fontSize: "1rem" }}>Oil & Gas</p>
+            <p style={{ fontSize: "1rem" }}>Healthcare</p>
+            <p style={{ fontSize: "1rem" }}>Software</p>
           </div>
           <div>
-            <p style={{ fontSize: "1.4rem" }}>Training</p>
-            <p style={{ fontSize: "1rem" }}>Documentation</p>
+            <p style={{ fontSize: "1.2rem" }}>Services We Offer</p>
+            <p style={{ fontSize: "1rem" }}>
+              Aircraft Management &amp; Maintenance
+            </p>
             <p style={{ fontSize: "1rem" }}>Internship</p>
+            <p style={{ fontSize: "1rem" }}>Recruitment and staffing</p>
             <p style={{ fontSize: "1rem" }}>Technical Publication</p>
           </div>
         </div>
@@ -765,49 +844,6 @@ function App() {
         >
           All rights reserved, TakeOff Techno Solutions @2022.
         </p>
-      </div>
-      {/* promotion */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: 0,
-          display: "flex",
-          justifyContent: "center",
-          width: "100vw",
-          backgroundColor: "#fff",
-        }}
-        className="promotionShadow"
-      >
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "rgb(37,43,93)",
-            color: "#fff",
-            padding: "1rem",
-          }}
-        >
-          <p
-            style={{
-              textAlign: "center",
-              margin: 0,
-              paddingRight: "2rem",
-              fontSize: "1.4rem",
-            }}
-          >
-            We are runnuing this offer specialy for you!
-          </p>
-          <Button
-            size="large"
-            color="info"
-            variant="contained"
-            style={{ borderRadius: "2rem", backgroundColor: "white" }}
-          >
-            Call Now
-          </Button>
-        </div>
       </div>
     </ThemeProvider>
   );
