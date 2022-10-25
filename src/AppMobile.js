@@ -958,22 +958,6 @@ function AppMobile() {
             </div>
           </a>
         </div>
-        <div style={{ marginTop: "3rem" }}>
-          <p style={{ fontSize: "1.2rem" }}>Industries We Server</p>
-          <p style={{ fontSize: "1rem" }}>Aerospace</p>
-          <p style={{ fontSize: "1rem" }}>Automotive</p>
-          <p style={{ fontSize: "1rem" }}>Healthcare</p>
-          <p style={{ fontSize: "1rem" }}>Software</p>
-        </div>
-        <div style={{ marginTop: "3rem" }}>
-          <p style={{ fontSize: "1.2rem" }}>Services We Offer</p>
-          <p style={{ fontSize: "1rem" }}>
-            Aircraft Management &amp; Maintenance
-          </p>
-          <p style={{ fontSize: "1rem" }}>Internship</p>
-          <p style={{ fontSize: "1rem" }}>Recruitment and staffing</p>
-          <p style={{ fontSize: "1rem" }}>Technical Publication</p>
-        </div>
 
         <p
           style={{
