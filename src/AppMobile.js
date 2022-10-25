@@ -266,101 +266,7 @@ function AppMobile() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div></div>
       <div style={{ padding: "1rem", backgroundColor: "#fdfdfd" }}>
-        {/* social */}
-        {/* <div
-          style={{
-            position: "fixed",
-            right: 0,
-            top: "30%",
-            padding: "1rem",
-            backgroundColor: "#fff",
-            borderTopLeftRadius: "1rem",
-            borderBottomLeftRadius: "1rem",
-          }}
-          className="socialMenu"
-        >
-          <a>
-            <div
-              style={{
-                marginBottom: "1rem",
-                backgroundColor: "#252B5D",
-                padding: "5px",
-                borderRadius: 20,
-                display: "flex",
-                justifyContent: "center",
-                cursor: "pointer",
-                alignItems: "center",
-              }}
-            >
-              <FaFacebookF size={20} color="#fff" />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                marginBottom: "1rem",
-                backgroundColor: "#252B5D",
-                padding: "5px",
-                borderRadius: 20,
-                display: "flex",
-                justifyContent: "center",
-                cursor: "pointer",
-                alignItems: "center",
-              }}
-            >
-              <FaInstagram size={20} color="#fff" />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                marginBottom: "1rem",
-                backgroundColor: "#252B5D",
-                padding: "5px",
-                borderRadius: 20,
-                display: "flex",
-                justifyContent: "center",
-                cursor: "pointer",
-                alignItems: "center",
-              }}
-            >
-              <FaLinkedinIn size={20} color="#fff" />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                marginBottom: "1rem",
-                backgroundColor: "#252B5D",
-                padding: "5px",
-                borderRadius: 20,
-                display: "flex",
-                justifyContent: "center",
-                cursor: "pointer",
-                alignItems: "center",
-              }}
-            >
-              <FaTwitter size={20} color="#fff" />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                backgroundColor: "#252B5D",
-                padding: "5px",
-                borderRadius: 20,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                cursor: "pointer",
-              }}
-            >
-              <IoLogoWhatsapp size={20} color="#fff" />
-            </div>
-          </a>
-        </div> */}
         {/* logo */}
         <div
           style={{
@@ -734,7 +640,7 @@ function AppMobile() {
         <div
           id="contact"
           style={{
-            marginBottom: "6rem",
+            //marginBottom: "10rem",
             margin: "1rem",
             borderRadius: "8px",
             marginTop: "10rem",
@@ -882,6 +788,96 @@ function AppMobile() {
             <div style={{ marginLeft: "2rem", marginTop: "1rem" }}>
               +91 8088853145
             </div>
+          </div>
+
+          <div
+            style={{
+              padding: "1rem",
+              display: "flex",
+              justifyContent: "space-between",
+              marginBottom: "3rem",
+              marginTop: "3rem",
+            }}
+          >
+            <a href="" style={{ textDecoration: "none" }}>
+              <div
+                style={{
+                  marginBottom: "1rem",
+                  backgroundColor: "#252B5D",
+                  padding: "5px",
+                  borderRadius: 20,
+                  display: "flex",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  alignItems: "center",
+                }}
+              >
+                <FaFacebookF size={20} color="#fff" />
+              </div>
+            </a>
+            <a href="" style={{ textDecoration: "none" }}>
+              <div
+                style={{
+                  marginBottom: "1rem",
+                  backgroundColor: "#252B5D",
+                  padding: "5px",
+                  borderRadius: 20,
+                  display: "flex",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  alignItems: "center",
+                }}
+              >
+                <FaInstagram size={20} color="#fff" />
+              </div>
+            </a>
+            <a href="" style={{ textDecoration: "none" }}>
+              <div
+                style={{
+                  marginBottom: "1rem",
+                  backgroundColor: "#252B5D",
+                  padding: "5px",
+                  borderRadius: 20,
+                  display: "flex",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  alignItems: "center",
+                }}
+              >
+                <FaLinkedinIn size={20} color="#fff" />
+              </div>
+            </a>
+            <a href="" style={{ textDecoration: "none" }}>
+              <div
+                style={{
+                  marginBottom: "1rem",
+                  backgroundColor: "#252B5D",
+                  padding: "5px",
+                  borderRadius: 20,
+                  display: "flex",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  alignItems: "center",
+                }}
+              >
+                <FaTwitter size={20} color="#fff" />
+              </div>
+            </a>
+            <a href="" style={{ textDecoration: "none" }}>
+              <div
+                style={{
+                  backgroundColor: "#252B5D",
+                  padding: "5px",
+                  borderRadius: 20,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  cursor: "pointer",
+                }}
+              >
+                <IoLogoWhatsapp size={20} color="#fff" />
+              </div>
+            </a>
           </div>
         </div>
       </div>
