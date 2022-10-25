@@ -409,7 +409,7 @@ function App() {
                 Services
               </p>
             </a>
-            <a style={{ textDecoration: "none" }} href="#training">
+            <a style={{ textDecoration: "none" }} href="#career">
               <p
                 className="menuHover"
                 style={{
