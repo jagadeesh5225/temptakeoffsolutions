@@ -6,8 +6,12 @@ import aboutimg from "./assests/img/about.png";
 import career from "./assests/img/career.png";
 import "./app.css";
 import { Button, Grid } from "@mui/material";
-import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
-import { MdLocationOn } from "react-icons/md";
+import { IoLogoWhatsapp, IoMdMail, IoMdSettings } from "react-icons/io";
+import {
+  MdLocationOn,
+  MdOutlineAirplanemodeActive,
+  MdOutlineLaptopMac,
+} from "react-icons/md";
 import landingside from "./assests/img/landingside.png";
 import {
   FaFacebookF,
@@ -21,6 +25,7 @@ import {
   FaUserTie,
 } from "react-icons/fa";
 import { GoPrimitiveDot } from "react-icons/go";
+import { RiStethoscopeLine } from "react-icons/ri";
 import { color } from "@mui/system";
 
 const Aircraft = () => {
@@ -261,10 +266,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div
-        style={{ padding: "1rem 10rem", backgroundColor: "#fdfdfd" }}
-        className="fullpage"
-      >
+      <div style={{ padding: "1rem 10rem", backgroundColor: "#fdfdfd" }}>
         {/* social */}
         <div
           style={{
@@ -364,12 +366,13 @@ function App() {
           style={{
             display: "flex",
             justifyContent: "space-between",
+            marginTop: "2rem",
           }}
         >
           <img
             src={logowater}
             alt="Takeoff Techno Solutions"
-            style={{ width: 120 }}
+            style={{ width: 150 }}
           />
           <div
             style={{
@@ -462,7 +465,7 @@ function App() {
         </div>
 
         {/* landing page */}
-        <div style={{ marginTop: "4rem", marginBottom: "5rem" }}>
+        <div style={{ marginTop: "8rem", marginBottom: "12rem" }}>
           <div
             style={{
               display: "flex",
@@ -499,7 +502,63 @@ function App() {
             />
           </div>
         </div>
+      </div>
+      {/* industries */}
+      <div
+        style={{
+          paddingTop: "0.2rem",
+          display: "flex",
+          justifyContent: "space-around",
+          fontSize: "1rem",
+          fontWeight: "500",
+          backgroundColor: "#e8eef8",
+        }}
+      >
+        <p
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            marginLeft: "10rem",
+          }}
+        >
+          <MdOutlineAirplanemodeActive style={{ marginRight: 5 }} />
+          Aerospace
+        </p>
+        <p
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+          }}
+        >
+          <IoMdSettings style={{ marginRight: 5 }} />
+          Automotive
+        </p>
+        <p
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+          }}
+        >
+          <RiStethoscopeLine style={{ marginRight: 5 }} />
+          Healthcare
+        </p>
 
+        <p
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            marginRight: "10rem",
+          }}
+        >
+          <MdOutlineLaptopMac style={{ marginRight: 5 }} />
+          Software
+        </p>
+      </div>
+      <div style={{ padding: "1rem 10rem", backgroundColor: "#fdfdfd" }}>
         {/* services */}
         <div
           id="service"
