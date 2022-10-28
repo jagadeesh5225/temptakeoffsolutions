@@ -5,7 +5,7 @@ import logowater from "./assests/img/logowater.png";
 import aboutimg from "./assests/img/about.png";
 import career from "./assests/img/career.png";
 import "./app.css";
-import { Button, Grid } from "@mui/material";
+import { Button, Modal, Box } from "@mui/material";
 import { IoLogoWhatsapp, IoMdMail, IoMdSettings } from "react-icons/io";
 import {
   MdLocationOn,
@@ -263,6 +263,7 @@ function AppMobile() {
   });
 
   const [page, setpage] = useState(0);
+  const [modalvisible, setmodalvisible] = useState(false);
 
   return (
     <ThemeProvider theme={theme}>
@@ -970,6 +971,16 @@ function AppMobile() {
           All rights reserved, TakeOff Techno Solutions @2022.
         </p>
       </div>
+      <Modal
+        open={modalvisible}
+        onClose={() => setmodalvisible(false)}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={{ padding: "1rem" }}>
+          
+        </Box>
+      </Modal>
     </ThemeProvider>
   );
 }
