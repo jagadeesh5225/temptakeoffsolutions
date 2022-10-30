@@ -566,6 +566,7 @@ function App() {
             // backgroundColor: "rgba(37,43,93,0.1)",
             padding: "1rem",
             marginBottom: "4rem",
+            marginTop: "2rem",
             borderRadius: "8px",
           }}
         >
@@ -717,9 +718,8 @@ function App() {
             alignItems: "center",
           }}
         >
-          {" "}
           <div
-            id="about"
+            id="career"
             style={{
               marginBottom: "6rem",
               margin: "1rem",
@@ -727,7 +727,7 @@ function App() {
               borderRadius: "8px",
             }}
           >
-            <h1 style={{ color: "#e4e4e4", fontSize: "3rem" }}>Career</h1>
+            <h1 style={{ color: "#e4e4e4", fontSize: "3rem" }}>Careers</h1>
 
             <p
               style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}
@@ -811,8 +811,8 @@ function App() {
         <div
           id="contact"
           style={{
+            // margin: "1rem",
             marginBottom: "6rem",
-            margin: "1rem",
             padding: "1rem",
             borderRadius: "8px",
           }}
@@ -1088,7 +1088,7 @@ function App() {
             fontSize: "14px",
           }}
         >
-          All rights reserved, TakeOff Techno Solutions @2022.
+          All rights reserved, TakeOff Techno Solutions © 2022
         </p>
       </div>
     </ThemeProvider>

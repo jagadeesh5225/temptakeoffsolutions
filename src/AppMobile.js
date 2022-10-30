@@ -1,18 +1,14 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import React, { useState, useEffect } from "react";
-import lplan from "./assests/img/lplane.png";
+import React, { useState } from "react";
 import logowater from "./assests/img/logowater.png";
-import aboutimg from "./assests/img/about.png";
-import career from "./assests/img/career.png";
 import "./app.css";
-import { Button, Modal, Box } from "@mui/material";
+import { Button, Modal } from "@mui/material";
 import { IoLogoWhatsapp, IoMdMail, IoMdSettings } from "react-icons/io";
 import {
   MdLocationOn,
   MdOutlineAirplanemodeActive,
   MdOutlineLaptopMac,
 } from "react-icons/md";
-import landingside from "./assests/img/landingside.png";
 import {
   FaFacebookF,
   FaInstagram,
@@ -24,14 +20,15 @@ import {
   FaBriefcase,
   FaUserTie,
 } from "react-icons/fa";
+import { FiX } from "react-icons/fi";
 import { GoPrimitiveDot } from "react-icons/go";
 import { RiStethoscopeLine } from "react-icons/ri";
-import { color } from "@mui/system";
 import landingmobile from "./assests/img/landingmobile.png";
+
 const Aircraft = () => {
   return (
-    <div>
-      <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
+    <div style={{ lineHeight: "1.2rem" }}>
+      <p style={{ fontSize: "1.2rem", color: "#252B5D", fontWeight: "500" }}>
         <FaPlaneDeparture style={{ marginRight: 10 }} />
         Aircraft Management & Maintenance
       </p>
@@ -40,64 +37,61 @@ const Aircraft = () => {
         cost-effective outsourcing solutions for managing and maintaining your
         aircraft.
       </p>
-      <div style={{ display: "flex", justifyContent: "flex-start" }}>
-        <div style={{ marginRight: "2rem" }}>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Calibration Support for Tools
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Component overhaul and repair
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Custom Clearance Support
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Flight crew Recruitment and Training.
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Installation and Certification Support
-          </p>
-        </div>
-        <div>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Interior Refurbishing
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Logistics Support
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Maintenance Services
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Managing the Aircraft
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Owning the Aircraft - Pre-purchase Inspection and Aircraft Acquision
-            and induction.
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Sales, Exchange and Loaning of Parts and Consumables
-          </p>
-        </div>
+      <div>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Calibration Support for Tools
+        </p>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Component overhaul and repair
+        </p>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Custom Clearance Support
+        </p>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Flight crew Recruitment and Training.
+        </p>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Installation and Certification Support
+        </p>
+
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Interior Refurbishing
+        </p>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Logistics Support
+        </p>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Maintenance Services
+        </p>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Managing the Aircraft
+        </p>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Owning the Aircraft - Pre-purchase Inspection and Aircraft Acquision
+          and induction.
+        </p>
+        <p>
+          <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+          Sales, Exchange and Loaning of Parts and Consumables
+        </p>
       </div>
     </div>
   );
 };
 const Internship = () => {
   return (
-    <div>
-      <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
+    <div style={{ lineHeight: "1.2rem" }}>
+      <p style={{ fontSize: "1.2rem", color: "#252B5D", fontWeight: "500" }}>
         <FaUserTie style={{ marginRight: 10 }} />
         Internship
       </p>
@@ -132,8 +126,8 @@ const Internship = () => {
 };
 const Recruit = () => {
   return (
-    <div>
-      <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
+    <div style={{ lineHeight: "1.2rem" }}>
+      <p style={{ fontSize: "1.2rem", color: "#252B5D", fontWeight: "500" }}>
         <FaBriefcase style={{ marginRight: 10 }} />
         Recruitment and staffing
       </p>
@@ -152,8 +146,8 @@ const Recruit = () => {
 };
 const TechnicalPub = () => {
   return (
-    <div>
-      <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
+    <div style={{ lineHeight: "1.2rem" }}>
+      <p style={{ fontSize: "1.2rem", color: "#252B5D", fontWeight: "500" }}>
         <FaFileAlt style={{ marginRight: 10 }} />
         Technical Publication
       </p>
@@ -189,66 +183,60 @@ const TechnicalPub = () => {
       <p style={{ fontWeight: "500", margin: 0 }}>
         Documentation deliverables:
       </p>
-      <div style={{ display: "flex", justifyContent: "flex-start" }}>
-        <div style={{ marginRight: "2rem" }}>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Aircraft Maintenance Manual
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Aircraft Wiring Manual
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            API Documentation
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Component Maintenance Manual
-          </p>
-        </div>
-        <div style={{ marginRight: "2rem" }}>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Courseware
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            E- Learning
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Engine Manuals
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Illustrated Parts Catalogue
-          </p>
-        </div>
-        <div>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Installation Guides
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Online Help
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Product user manuals
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Structural Repair Manual
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Training
-          </p>
-        </div>
-      </div>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Aircraft Maintenance Manual
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Aircraft Wiring Manual
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        API Documentation
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Component Maintenance Manual
+      </p>
+
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Courseware
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        E- Learning
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Engine Manuals
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Illustrated Parts Catalogue
+      </p>
+
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Installation Guides
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Online Help
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Product user manuals
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Structural Repair Manual
+      </p>
+      <p>
+        <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+        Training
+      </p>
     </div>
   );
 };
@@ -262,7 +250,7 @@ function AppMobile() {
     },
   });
 
-  const [page, setpage] = useState(0);
+  const [page, setpage] = useState("");
   const [modalvisible, setmodalvisible] = useState(false);
 
   return (
@@ -273,7 +261,7 @@ function AppMobile() {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginTop: "3rem",
+            marginTop: "1rem",
           }}
         >
           <img
@@ -395,17 +383,20 @@ function AppMobile() {
               borderRight: "1px #d9d9d9 solid",
               padding: "1rem",
               cursor: "pointer",
-              backgroundColor: page === 1 ? "#002366" : "#f3f6fc",
-              color: page === 1 ? "#fff" : "#000",
+              backgroundColor: "#f3f6fc",
+              color: "#000",
               borderRadius: 8,
               marginBottom: "1rem",
             }}
-            onClick={() => setpage(1)}
+            onClick={() => {
+              setpage("Aircraft");
+              setmodalvisible(true);
+            }}
           >
             <p
               style={{
                 fontSize: "1.2rem",
-                color: page === 1 ? "#fff" : "#002366",
+                color: "#002366",
                 fontWeight: "500",
                 margin: 0,
               }}
@@ -420,22 +411,25 @@ function AppMobile() {
             <p style={{ textAlign: "right" }}>Read More...</p>
           </div>
           <div
-            onClick={() => setpage(2)}
             style={{
               borderBottom: "2px #d9d9d9 solid",
               borderRight: "1px #d9d9d9 solid",
               padding: "1rem",
               cursor: "pointer",
-              backgroundColor: page === 2 ? "#002366" : "#f3f6fc",
-              color: page === 2 ? "#fff" : "#000",
+              backgroundColor: "#f3f6fc",
+              color: "#000",
               borderRadius: 8,
               marginBottom: "1rem",
+            }}
+            onClick={() => {
+              setpage("Internship");
+              setmodalvisible(true);
             }}
           >
             <p
               style={{
                 fontSize: "1.2rem",
-                color: page === 2 ? "#fff" : "#002366",
+                color: "#002366",
                 fontWeight: "500",
                 margin: 0,
               }}
@@ -450,22 +444,25 @@ function AppMobile() {
             <p style={{ textAlign: "right" }}>Read More...</p>
           </div>
           <div
-            onClick={() => setpage(3)}
             style={{
               borderBottom: "2px #d9d9d9 solid",
               borderRight: "1px #d9d9d9 solid",
               padding: "1rem",
               cursor: "pointer",
-              backgroundColor: page === 3 ? "#002366" : "#f3f6fc",
-              color: page === 3 ? "#fff" : "#000",
+              backgroundColor: "#f3f6fc",
+              color: "#000",
               borderRadius: 8,
               marginBottom: "1rem",
+            }}
+            onClick={() => {
+              setpage("Recruit");
+              setmodalvisible(true);
             }}
           >
             <p
               style={{
                 fontSize: "1.2rem",
-                color: page === 3 ? "#fff" : "#002366",
+                color: "#002366",
                 fontWeight: "500",
                 margin: 0,
               }}
@@ -480,7 +477,6 @@ function AppMobile() {
             <p style={{ textAlign: "right" }}>Read More...</p>
           </div>
           <div
-            onClick={() => setpage(4)}
             style={{
               borderBottom: "2px #d9d9d9 solid",
               borderRight: "1px #d9d9d9 solid",
@@ -488,14 +484,18 @@ function AppMobile() {
               marginBottom: "1rem",
               padding: "1rem",
               cursor: "pointer",
-              backgroundColor: page === 4 ? "#002366" : "#f3f6fc",
-              color: page === 4 ? "#fff" : "#000",
+              backgroundColor: "#f3f6fc",
+              color: "#000",
+            }}
+            onClick={() => {
+              setpage("TechnicalPub");
+              setmodalvisible(true);
             }}
           >
             <p
               style={{
                 fontSize: "1.2rem",
-                color: page === 4 ? "#fff" : "#002366",
+                color: "#002366",
                 fontWeight: "500",
                 margin: 0,
               }}
@@ -539,7 +539,7 @@ function AppMobile() {
         </div>
 
         {/* Career */}
-        <div id="career" style={{ marginBottom: "10rem" }}>
+        <div id="career" style={{ marginBottom: "6rem" }}>
           <div
             style={{
               display: "flex",
@@ -555,7 +555,7 @@ function AppMobile() {
                 marginBottom: "0",
               }}
             >
-              Career
+              Careers
             </h1>
             {/* <img src={career} alt="" style={{ width: 100 }} /> */}
           </div>
@@ -598,7 +598,7 @@ function AppMobile() {
         <div
           id="about"
           style={{
-            marginTop: "10rem",
+            marginTop: "6rem",
             margin: "1rem",
             borderRadius: "8px",
           }}
@@ -644,7 +644,7 @@ function AppMobile() {
             //marginBottom: "10rem",
             margin: "1rem",
             borderRadius: "8px",
-            marginTop: "10rem",
+            marginTop: "6rem",
           }}
         >
           <h1 style={{ color: "#e4e4e4", fontSize: "3rem" }}>CONTACT US</h1>
@@ -790,13 +790,13 @@ function AppMobile() {
               +91 8088853145
             </div>
           </div>
-
-          <div
+          {/* social*/}
+          {/* <div
             style={{
               padding: "1rem",
               display: "flex",
               justifyContent: "space-between",
-              marginBottom: "3rem",
+              marginBottom: "1rem",
               marginTop: "3rem",
             }}
           >
@@ -879,7 +879,7 @@ function AppMobile() {
                 <IoLogoWhatsapp size={20} color="#fff" />
               </div>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* footer */}
@@ -890,9 +890,16 @@ function AppMobile() {
           color: "#fff",
         }}
       >
-        <p style={{ fontSize: "1.4rem", textAlign: "center" }}>
+        <p
+          style={{
+            fontSize: "1.4rem",
+            textAlign: "center",
+            marginBottom: "3rem",
+          }}
+        >
           TakeOff Techno Solutions
         </p>
+
         <div>
           <div
             style={{
@@ -959,27 +966,157 @@ function AppMobile() {
             </div>
           </a>
         </div>
-
+        {/* social*/}
+        <div
+          style={{
+            padding: "1rem",
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "1.5rem",
+          }}
+        >
+          <a href="" style={{ textDecoration: "none" }}>
+            <div
+              style={{
+                marginBottom: "1rem",
+                backgroundColor: "#fff",
+                padding: "5px",
+                borderRadius: 20,
+                display: "flex",
+                justifyContent: "center",
+                cursor: "pointer",
+                alignItems: "center",
+              }}
+            >
+              <FaFacebookF size={20} color="#252B5D" />
+            </div>
+          </a>
+          <a href="" style={{ textDecoration: "none" }}>
+            <div
+              style={{
+                marginBottom: "1rem",
+                backgroundColor: "#fff",
+                padding: "5px",
+                borderRadius: 20,
+                display: "flex",
+                justifyContent: "center",
+                cursor: "pointer",
+                alignItems: "center",
+              }}
+            >
+              <FaInstagram size={20} color="#252B5D" />
+            </div>
+          </a>
+          <a href="" style={{ textDecoration: "none" }}>
+            <div
+              style={{
+                marginBottom: "1rem",
+                backgroundColor: "#fff",
+                padding: "5px",
+                borderRadius: 20,
+                display: "flex",
+                justifyContent: "center",
+                cursor: "pointer",
+                alignItems: "center",
+              }}
+            >
+              <FaLinkedinIn size={20} color="#252B5D" />
+            </div>
+          </a>
+          <a href="" style={{ textDecoration: "none" }}>
+            <div
+              style={{
+                marginBottom: "1rem",
+                backgroundColor: "#fff",
+                padding: "5px",
+                borderRadius: 20,
+                display: "flex",
+                justifyContent: "center",
+                cursor: "pointer",
+                alignItems: "center",
+              }}
+            >
+              <FaTwitter size={20} color="#252B5D" />
+            </div>
+          </a>
+          <a href="" style={{ textDecoration: "none" }}>
+            <div
+              style={{
+                backgroundColor: "#fff",
+                padding: "5px",
+                borderRadius: 20,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+            >
+              <IoLogoWhatsapp size={20} color="#252B5D" />
+            </div>
+          </a>
+        </div>
         <p
           style={{
             textAlign: "center",
             color: "#d9d9d9",
-            marginTop: "2rem",
+            marginTop: "1rem",
             fontSize: "14px",
           }}
         >
-          All rights reserved, TakeOff Techno Solutions @2022.
+          All rights reserved, TakeOff Techno Solutions © 2022
         </p>
       </div>
       <Modal
         open={modalvisible}
         onClose={() => setmodalvisible(false)}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        style={{ border: "none" }}
       >
-        <Box sx={{ padding: "1rem" }}>
-          
-        </Box>
+        <div
+          style={{
+            padding: "1.4rem",
+            backgroundColor: "#fff",
+            border: "none",
+            height: "60vh",
+            overflowY: "auto",
+            bottom: 0,
+            position: "absolute",
+            borderTopLeftRadius: "2rem",
+            borderTopRightRadius: "2rem",
+            paddingBottom: "3rem",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "right",
+              marginBottom: "1rem",
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "#eef4fe",
+                height: 30,
+                width: 30,
+                display: "flex",
+                alignItems: "center",
+                borderRadius: 30,
+                justifyContent: "center",
+              }}
+              onClick={() => setmodalvisible(false)}
+            >
+              <FiX color="#eb483b" size={20} />
+            </div>
+          </div>
+          {page === "Aircraft" ? (
+            <Aircraft />
+          ) : page === "Internship" ? (
+            <Internship />
+          ) : page === "Recruit" ? (
+            <Recruit />
+          ) : (
+            <TechnicalPub />
+          )}
+        </div>
       </Modal>
     </ThemeProvider>
   );
