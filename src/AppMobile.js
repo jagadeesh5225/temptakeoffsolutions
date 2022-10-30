@@ -375,8 +375,39 @@ function AppMobile() {
           <h1
             style={{ color: "#e4e4e4", fontSize: "3rem", textAlign: "center" }}
           >
-            Services
+            Solutions
           </h1>
+          <div
+            style={{
+              borderBottom: "2px #d9d9d9 solid",
+              borderRight: "1px #d9d9d9 solid",
+              borderRadius: 8,
+              marginBottom: "1rem",
+              padding: "1rem",
+              cursor: "pointer",
+              backgroundColor: "#f3f6fc",
+              color: "#000",
+            }}
+            onClick={() => {
+              setpage("TechnicalPub");
+              setmodalvisible(true);
+            }}
+          >
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#002366",
+                fontWeight: "500",
+                margin: 0,
+              }}
+            >
+              <FaFileAlt style={{ marginRight: 6 }} /> Technical Publication
+            </p>
+            <p style={{ color: "#770c20" }}>
+              WE DESIGN, DEVELOP AND DOCUMENT YOUR PRODUCT!
+            </p>
+            <p style={{ textAlign: "right" }}>Read More...</p>
+          </div>
           <div
             style={{
               borderBottom: "2px #d9d9d9 solid",
@@ -404,42 +435,8 @@ function AppMobile() {
               <FaPlaneDeparture style={{ marginRight: 10 }} />
               Aircraft Management & Maintenance
             </p>
-            <p>
-              Takeoff first will strive to understand your specific needs and
-              develop...
-            </p>
-            <p style={{ textAlign: "right" }}>Read More...</p>
-          </div>
-          <div
-            style={{
-              borderBottom: "2px #d9d9d9 solid",
-              borderRight: "1px #d9d9d9 solid",
-              padding: "1rem",
-              cursor: "pointer",
-              backgroundColor: "#f3f6fc",
-              color: "#000",
-              borderRadius: 8,
-              marginBottom: "1rem",
-            }}
-            onClick={() => {
-              setpage("Internship");
-              setmodalvisible(true);
-            }}
-          >
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "#002366",
-                fontWeight: "500",
-                margin: 0,
-              }}
-            >
-              <FaUserTie style={{ marginRight: 10 }} />
-              Internship
-            </p>
-            <p>
-              Takeoff offers a platform to develop ready to deploy skills
-              through our...
+            <p style={{ color: "#770c20" }}>
+              SOLUTIONS FOR YOUR AIRCRAFT OWNERSHIP!
             </p>
             <p style={{ textAlign: "right" }}>Read More...</p>
           </div>
@@ -470,25 +467,22 @@ function AppMobile() {
               <FaBriefcase style={{ marginRight: 10 }} />
               Recruitment and staffing
             </p>
-            <p>
-              Takeoff provides flexible, efficient, and cost-effective workforce
-              solutions...
-            </p>
+            <p style={{ color: "#770c20" }}>ONE STOP TO HIRE PROFESSIONALS!</p>
             <p style={{ textAlign: "right" }}>Read More...</p>
           </div>
           <div
             style={{
               borderBottom: "2px #d9d9d9 solid",
               borderRight: "1px #d9d9d9 solid",
-              borderRadius: 8,
-              marginBottom: "1rem",
               padding: "1rem",
               cursor: "pointer",
               backgroundColor: "#f3f6fc",
               color: "#000",
+              borderRadius: 8,
+              marginBottom: "1rem",
             }}
             onClick={() => {
-              setpage("TechnicalPub");
+              setpage("Internship");
               setmodalvisible(true);
             }}
           >
@@ -500,12 +494,10 @@ function AppMobile() {
                 margin: 0,
               }}
             >
-              <FaFileAlt style={{ marginRight: 6 }} /> Technical Publication
+              <FaUserTie style={{ marginRight: 10 }} />
+              Internships
             </p>
-            <p>
-              TAKEOFF offers a wide range of technical authoring and
-              illustration...
-            </p>
+            <p style={{ color: "#770c20" }}>RUNWAY FOR YOUR FUTURE!</p>
             <p style={{ textAlign: "right" }}>Read More...</p>
           </div>
 

@@ -31,9 +31,15 @@ import { color } from "@mui/system";
 const Aircraft = () => {
   return (
     <div>
-      <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
-        <FaPlaneDeparture style={{ marginRight: 10 }} />
-        Aircraft Management & Maintenance
+      <p
+        style={{
+          fontSize: "2rem",
+          color: "#770c20",
+          fontWeight: "500",
+          textTransform: "uppercase",
+        }}
+      >
+        SOLUTIONs FOR YOUR AIRCRAFT ownership!
       </p>
       <p>
         Takeoff first will strive to understand your specific needs and develop
@@ -43,50 +49,47 @@ const Aircraft = () => {
       <div style={{ display: "flex", justifyContent: "flex-start" }}>
         <div style={{ marginRight: "2rem" }}>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Calibration Support for Tools
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Component overhaul and repair
           </p>
+
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Custom Clearance Support
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Flight crew Recruitment and Training.
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Installation and Certification Support
+          </p>
+          <p>
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+            Interior Refurbishing
           </p>
         </div>
         <div>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Interior Refurbishing
-          </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Logistics Support
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Maintenance Services
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Managing the Aircraft
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Owning the Aircraft - Pre-purchase Inspection and Aircraft Acquision
             and induction.
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Sales, Exchange and Loaning of Parts and Consumables
           </p>
         </div>
@@ -97,9 +100,15 @@ const Aircraft = () => {
 const Internship = () => {
   return (
     <div>
-      <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
-        <FaUserTie style={{ marginRight: 10 }} />
-        Internship
+      <p
+        style={{
+          fontSize: "2rem",
+          color: "#770c20",
+          fontWeight: "500",
+          textTransform: "uppercase",
+        }}
+      >
+        Runway For Your Future!
       </p>
       <p>
         Takeoff offers a platform to develop ready to deploy skills through our
@@ -133,9 +142,15 @@ const Internship = () => {
 const Recruit = () => {
   return (
     <div>
-      <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
-        <FaBriefcase style={{ marginRight: 10 }} />
-        Recruitment and staffing
+      <p
+        style={{
+          fontSize: "2rem",
+          color: "#770c20",
+          fontWeight: "500",
+          textTransform: "uppercase",
+        }}
+      >
+        One Stop to hire professionals!
       </p>
       <p>
         Takeoff provides flexible, efficient, and cost-effective workforce
@@ -153,13 +168,19 @@ const Recruit = () => {
 const TechnicalPub = () => {
   return (
     <div>
-      <p style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}>
-        <FaFileAlt style={{ marginRight: 10 }} />
-        Technical Publication
-      </p>
-      <p style={{ fontWeight: "500", fontSize: "1.2rem" }}>
+      <p
+        style={{
+          fontSize: "2rem",
+          color: "#770c20",
+          fontWeight: "500",
+          textTransform: "uppercase",
+        }}
+      >
         We design, develop and document your product!
       </p>
+      {/* <p style={{ fontWeight: "500", fontSize: "1.2rem" }}>
+        We design, develop and document your product!
+      </p> */}
       <p>
         TAKEOFF offers a wide range of technical authoring and illustration
         solutions to organizations to effectively manage author and publish
@@ -192,60 +213,60 @@ const TechnicalPub = () => {
       <div style={{ display: "flex", justifyContent: "flex-start" }}>
         <div style={{ marginRight: "2rem" }}>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Aircraft Maintenance Manual
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Aircraft Wiring Manual
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             API Documentation
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Component Maintenance Manual
           </p>
         </div>
         <div style={{ marginRight: "2rem" }}>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Courseware
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             E- Learning
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Engine Manuals
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Illustrated Parts Catalogue
           </p>
         </div>
         <div>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Installation Guides
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Online Help
           </p>
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Product user manuals
           </p>
-          <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
+          {/* <p>
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
             Structural Repair Manual
-          </p>
+          </p> */}
           <p>
-            <GoPrimitiveDot style={{ marginRight: 5 }} />
-            Training
+            <GoPrimitiveDot color="#b8b8b8" style={{ marginRight: 5 }} />
+            Training Courseware
           </p>
         </div>
       </div>
@@ -406,7 +427,7 @@ function App() {
                   fontWeight: 500,
                 }}
               >
-                Services
+                Solutions
               </p>
             </a>
             <a style={{ textDecoration: "none" }} href="#career">
@@ -473,7 +494,7 @@ function App() {
               alignItems: "center",
             }}
           >
-            <div>
+            <div style={{ marginRight: "2rem" }}>
               <p
                 style={{
                   fontSize: "2.5rem",
@@ -498,7 +519,7 @@ function App() {
             <img
               src={landingside}
               alt=""
-              style={{ width: 600, transform: "scaleX(-1)" }}
+              style={{ width: 500, transform: "scaleX(-1)" }}
             />
           </div>
         </div>
@@ -511,7 +532,7 @@ function App() {
           justifyContent: "space-around",
           fontSize: "1rem",
           fontWeight: "500",
-          backgroundColor: "#e8eef8",
+          backgroundColor: "#f8f3f4",
         }}
       >
         <p
@@ -522,7 +543,11 @@ function App() {
             marginLeft: "10rem",
           }}
         >
-          <MdOutlineAirplanemodeActive style={{ marginRight: 5 }} />
+          <MdOutlineAirplanemodeActive
+            size={20}
+            color="#770c20"
+            style={{ marginRight: 5 }}
+          />
           Aerospace
         </p>
         <p
@@ -532,7 +557,7 @@ function App() {
             alignItems: "center",
           }}
         >
-          <IoMdSettings style={{ marginRight: 5 }} />
+          <IoMdSettings style={{ marginRight: 5 }} size={20} color="#770c20" />
           Automotive
         </p>
         <p
@@ -542,7 +567,11 @@ function App() {
             alignItems: "center",
           }}
         >
-          <RiStethoscopeLine style={{ marginRight: 5 }} />
+          <RiStethoscopeLine
+            style={{ marginRight: 5 }}
+            size={20}
+            color="#770c20"
+          />
           Healthcare
         </p>
 
@@ -554,7 +583,11 @@ function App() {
             marginRight: "10rem",
           }}
         >
-          <MdOutlineLaptopMac style={{ marginRight: 5 }} />
+          <MdOutlineLaptopMac
+            style={{ marginRight: 5 }}
+            size={20}
+            color="#770c20"
+          />
           Software
         </p>
       </div>
@@ -571,9 +604,14 @@ function App() {
           }}
         >
           <h1
-            style={{ color: "#e4e4e4", fontSize: "3rem", textAlign: "center" }}
+            style={{
+              color: "#e4e4e4",
+              fontSize: "3rem",
+              textAlign: "center",
+              textTransform: "uppercase",
+            }}
           >
-            Services
+            Solutions
           </h1>
           <div
             style={{
@@ -583,11 +621,12 @@ function App() {
             }}
           >
             <div
+              onClick={() => setpage(1)}
               style={{
-                borderTopRightRadius: 30,
-                borderTopLeftRadius: 30,
                 borderBottom: "2px #d9d9d9 solid",
                 borderRight: "1px #d9d9d9 solid",
+                borderTopRightRadius: 30,
+                borderTopLeftRadius: 30,
                 padding: "1rem",
                 cursor: "pointer",
                 backgroundColor: page === 1 ? "#002366" : "#f3f6fc",
@@ -595,7 +634,6 @@ function App() {
                 width: "100%",
                 minWidth: "max-content",
               }}
-              onClick={() => setpage(1)}
             >
               <p
                 style={{
@@ -605,24 +643,23 @@ function App() {
                   margin: 0,
                 }}
               >
-                <FaPlaneDeparture style={{ marginRight: 10 }} />
-                Aircraft Management & Maintenance
+                <FaFileAlt style={{ marginRight: 6 }} /> Technical Publication
               </p>
             </div>
             <div
-              onClick={() => setpage(2)}
               style={{
+                borderTopRightRadius: 30,
+                borderTopLeftRadius: 30,
                 borderBottom: "2px #d9d9d9 solid",
                 borderRight: "1px #d9d9d9 solid",
                 padding: "1rem",
                 cursor: "pointer",
                 backgroundColor: page === 2 ? "#002366" : "#f3f6fc",
                 color: page === 2 ? "#fff" : "#000",
-                borderTopRightRadius: 30,
-                borderTopLeftRadius: 30,
                 width: "100%",
                 minWidth: "max-content",
               }}
+              onClick={() => setpage(2)}
             >
               <p
                 style={{
@@ -632,8 +669,8 @@ function App() {
                   margin: 0,
                 }}
               >
-                <FaUserTie style={{ marginRight: 10 }} />
-                Internship
+                <FaPlaneDeparture style={{ marginRight: 10 }} />
+                Aircraft Management & Maintenance
               </p>
             </div>
             <div
@@ -668,12 +705,12 @@ function App() {
               style={{
                 borderBottom: "2px #d9d9d9 solid",
                 borderRight: "1px #d9d9d9 solid",
-                borderTopRightRadius: 30,
-                borderTopLeftRadius: 30,
                 padding: "1rem",
                 cursor: "pointer",
                 backgroundColor: page === 4 ? "#002366" : "#f3f6fc",
                 color: page === 4 ? "#fff" : "#000",
+                borderTopRightRadius: 30,
+                borderTopLeftRadius: 30,
                 width: "100%",
                 minWidth: "max-content",
               }}
@@ -686,7 +723,8 @@ function App() {
                   margin: 0,
                 }}
               >
-                <FaFileAlt style={{ marginRight: 6 }} /> Technical Publication
+                <FaUserTie style={{ marginRight: 10 }} />
+                Internships
               </p>
             </div>
           </div>
@@ -699,18 +737,29 @@ function App() {
             }}
           >
             {page === 1 ? (
-              <Aircraft />
+              <TechnicalPub />
             ) : page === 2 ? (
-              <Internship />
+              <Aircraft />
             ) : page === 3 ? (
               <Recruit />
-            ) : (
-              <TechnicalPub />
-            )}
+            ) : page === 4 ? (
+              <Internship />
+            ) : null}
           </div>
         </div>
 
         {/* Career */}
+        <h1
+          style={{
+            color: "#e4e4e4",
+            fontSize: "3rem",
+            textAlign: "center",
+            marginBottom: "-2rem",
+            textTransform: "uppercase",
+          }}
+        >
+          Careers
+        </h1>
         <div
           style={{
             display: "flex",
@@ -727,8 +776,6 @@ function App() {
               borderRadius: "8px",
             }}
           >
-            <h1 style={{ color: "#e4e4e4", fontSize: "3rem" }}>Careers</h1>
-
             <p
               style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}
             >
@@ -775,12 +822,12 @@ function App() {
               alignItems: "center",
             }}
           >
-            <img
+            {/* <img
               src={aboutimg}
               alt=""
               width={300}
               style={{ marginRight: "1rem" }}
-            />
+            /> */}
             <div style={{ fontSize: "1.1rem", lineHeight: "2rem" }}>
               <p>
                 TakeOff Techno Solutions Pvt. Ltd (TOTSPL) is an aviation
@@ -818,14 +865,18 @@ function App() {
           }}
         >
           <h1
-            style={{ color: "#e4e4e4", fontSize: "3rem", textAlign: "right" }}
+            style={{
+              color: "#e4e4e4",
+              fontSize: "3rem",
+              textAlign: "center",
+            }}
           >
             CONTACT US
           </h1>
           <p
             style={{
               marginBottom: "5rem",
-              textAlign: "right",
+              textAlign: "center",
               fontSize: "1.1rem",
               lineHeight: "2rem",
             }}
@@ -1063,20 +1114,21 @@ function App() {
             </a>
           </div>
           <div>
-            <p style={{ fontSize: "1.2rem" }}>Industries We Server</p>
+            <p style={{ fontSize: "1.2rem" }}>Industries We Serve</p>
             <p style={{ fontSize: "1rem" }}>Aerospace</p>
             <p style={{ fontSize: "1rem" }}>Automotive</p>
             <p style={{ fontSize: "1rem" }}>Healthcare</p>
             <p style={{ fontSize: "1rem" }}>Software</p>
           </div>
           <div>
-            <p style={{ fontSize: "1.2rem" }}>Services We Offer</p>
+            <p style={{ fontSize: "1.2rem" }}>Solutions We Offer</p>
+            <p style={{ fontSize: "1rem" }}>Technical Publication</p>
+
             <p style={{ fontSize: "1rem" }}>
               Aircraft Management &amp; Maintenance
             </p>
-            <p style={{ fontSize: "1rem" }}>Internship</p>
             <p style={{ fontSize: "1rem" }}>Recruitment and staffing</p>
-            <p style={{ fontSize: "1rem" }}>Technical Publication</p>
+            <p style={{ fontSize: "1rem" }}>Internships</p>
           </div>
         </div>
 
