@@ -24,13 +24,14 @@ import { FiX } from "react-icons/fi";
 import { GoPrimitiveDot } from "react-icons/go";
 import { RiStethoscopeLine } from "react-icons/ri";
 import landingmobile from "./assests/img/landingmobile.png";
+import { slideInRight, zoomIn } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
 const Aircraft = () => {
   return (
-    <div style={{ lineHeight: "1.2rem" }}>
-      <p style={{ fontSize: "1.2rem", color: "#252B5D", fontWeight: "500" }}>
-        <FaPlaneDeparture style={{ marginRight: 10 }} />
-        Aircraft Management & Maintenance
+    <div style={{ lineHeight: "2rem" }}>
+      <p style={{ fontSize: "1.2rem", color: "#770c20", fontWeight: "500" }}>
+        SOLUTIONS FOR YOUR AIRCRAFT OWNERSHIP!
       </p>
       <p>
         Takeoff first will strive to understand your specific needs and develop
@@ -90,10 +91,9 @@ const Aircraft = () => {
 };
 const Internship = () => {
   return (
-    <div style={{ lineHeight: "1.2rem" }}>
-      <p style={{ fontSize: "1.2rem", color: "#252B5D", fontWeight: "500" }}>
-        <FaUserTie style={{ marginRight: 10 }} />
-        Internship
+    <div style={{ lineHeight: "2rem" }}>
+      <p style={{ fontSize: "1.2rem", color: "#770c20", fontWeight: "500" }}>
+        RUNWAY FOR YOUR FUTURE!
       </p>
       <p>
         Takeoff offers a platform to develop ready to deploy skills through our
@@ -126,12 +126,11 @@ const Internship = () => {
 };
 const Recruit = () => {
   return (
-    <div style={{ lineHeight: "1.2rem" }}>
-      <p style={{ fontSize: "1.2rem", color: "#252B5D", fontWeight: "500" }}>
-        <FaBriefcase style={{ marginRight: 10 }} />
-        Recruitment and staffing
+    <div style={{ lineHeight: "2rem" }}>
+      <p style={{ fontSize: "1.2rem", color: "#770c20", fontWeight: "500" }}>
+        ONE STOP TO HIRE PROFESSIONALS!
       </p>
-      <p>
+      <p style={{ fontSize: "1.1rem" }}>
         Takeoff provides flexible, efficient, and cost-effective workforce
         solutions to meet client's workforce requirements. We provide Contract,
         C2H, Perm Hiring's and Payroll Managements Services for our clients.
@@ -146,14 +145,11 @@ const Recruit = () => {
 };
 const TechnicalPub = () => {
   return (
-    <div style={{ lineHeight: "1.2rem" }}>
-      <p style={{ fontSize: "1.2rem", color: "#252B5D", fontWeight: "500" }}>
-        <FaFileAlt style={{ marginRight: 10 }} />
-        Technical Publication
+    <div style={{ lineHeight: "2rem" }}>
+      <p style={{ fontSize: "1.2rem", color: "#770c20", fontWeight: "500" }}>
+        WE DESIGN, DEVELOP AND DOCUMENT YOUR PRODUCT!
       </p>
-      <p style={{ fontWeight: "500", fontSize: "1.2rem" }}>
-        We design, develop and document your product!
-      </p>
+
       <p>
         TAKEOFF offers a wide range of technical authoring and illustration
         solutions to organizations to effectively manage author and publish
@@ -241,6 +237,18 @@ const TechnicalPub = () => {
   );
 };
 
+const styles = {
+  zoomIn: {
+    animation: "x 4s",
+    animationName: Radium.keyframes(zoomIn, "zoomInUp"),
+  },
+
+  slideOutDown: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(slideInRight, "slideInRight"),
+  },
+};
+
 function AppMobile() {
   const theme = createTheme({
     palette: {
@@ -255,7 +263,7 @@ function AppMobile() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ padding: "1rem", backgroundColor: "#fdfdfd" }}>
+      <div style={{ padding: "1rem", backgroundColor: "#ffffff" }}>
         {/* logo */}
         <div
           style={{
@@ -270,18 +278,25 @@ function AppMobile() {
             style={{ width: 200 }}
           />
         </div>
-        <p style={{ textAlign: "center", fontWeight: "500", color: "#252b5d" }}>
+        {/* <p style={{ textAlign: "center", fontWeight: "500", color: "#252b5d" }}>
           TakeOff Techno Solutions
-        </p>
+        </p> */}
         {/* landing */}
-
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <img
-            src={landingmobile}
-            alt=""
-            style={{ width: 400, transform: "scaleX(-1)" }}
-          />
-        </div>
+        <StyleRoot>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              ...styles.zoomIn,
+            }}
+          >
+            <img
+              src={landingmobile}
+              alt=""
+              style={{ width: 400, transform: "scaleX(-1)" }}
+            />
+          </div>
+        </StyleRoot>
         <p
           style={{
             fontSize: "1.6rem",
@@ -313,10 +328,17 @@ function AppMobile() {
           marginTop: "3rem",
           fontSize: "1rem",
           fontWeight: "500",
-          backgroundColor: "#e8eef8",
+          backgroundColor: "#f8f3f4",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginRight: "2rem",
+            marginLeft: "2rem",
+          }}
+        >
           <p
             style={{
               display: "flex",
@@ -324,7 +346,11 @@ function AppMobile() {
               alignItems: "center",
             }}
           >
-            <MdOutlineAirplanemodeActive style={{ marginRight: 5 }} />
+            <MdOutlineAirplanemodeActive
+              size={20}
+              color="#770c20"
+              style={{ marginRight: 5 }}
+            />
             Aerospace
           </p>
           <p
@@ -334,11 +360,22 @@ function AppMobile() {
               alignItems: "center",
             }}
           >
-            <IoMdSettings style={{ marginRight: 5 }} />
+            <IoMdSettings
+              size={20}
+              color="#770c20"
+              style={{ marginRight: 5 }}
+            />
             Automotive
           </p>
         </div>
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginRight: "2rem",
+            marginLeft: "2rem",
+          }}
+        >
           <p
             style={{
               display: "flex",
@@ -346,7 +383,11 @@ function AppMobile() {
               alignItems: "center",
             }}
           >
-            <RiStethoscopeLine style={{ marginRight: 5 }} />
+            <RiStethoscopeLine
+              size={20}
+              color="#770c20"
+              style={{ marginRight: 5 }}
+            />
             Healthcare
           </p>
           <p
@@ -356,24 +397,40 @@ function AppMobile() {
               alignItems: "center",
             }}
           >
-            <MdOutlineLaptopMac style={{ marginRight: 5 }} />
+            <MdOutlineLaptopMac
+              size={20}
+              color="#770c20"
+              style={{ marginRight: 5 }}
+            />
             Software
           </p>
         </div>
       </div>
-      <div style={{ padding: "1rem", backgroundColor: "#fdfdfd" }}>
+      <div
+        style={{
+          padding: "1rem",
+          backgroundColor: "#ffffff",
+        }}
+      >
         {/* services */}
         <div
           id="service"
           style={{
             // backgroundColor: "rgba(37,43,93,0.1)",
             padding: "1rem",
-            marginBottom: "4rem",
+            // marginBottom: "4rem",
             borderRadius: "8px",
+            marginTop: "3rem",
           }}
         >
           <h1
-            style={{ color: "#e4e4e4", fontSize: "3rem", textAlign: "center" }}
+            style={{
+              color: "#e4e4e4",
+              fontSize: "3rem",
+              textAlign: "center",
+              textTransform: "uppercase",
+              marginBottom: "3rem",
+            }}
           >
             Solutions
           </h1>
@@ -531,27 +588,25 @@ function AppMobile() {
         </div>
 
         {/* Career */}
-        <div id="career" style={{ marginBottom: "6rem" }}>
-          <div
+        <div
+          id="career"
+          style={{
+            marginTop: "4rem",
+            //  marginBottom: "6rem"
+          }}
+        >
+          <h1
             style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
+              color: "#e4e4e4",
+              fontSize: "3rem",
+              marginLeft: "1rem",
+              marginBottom: "3rem",
+              textTransform: "uppercase",
+              textAlign: "center",
             }}
           >
-            <h1
-              style={{
-                color: "#e4e4e4",
-                fontSize: "3rem",
-                marginLeft: "1rem",
-                marginBottom: "0",
-              }}
-            >
-              Careers
-            </h1>
-            {/* <img src={career} alt="" style={{ width: 100 }} /> */}
-          </div>
-
+            Careers
+          </h1>
           <div
             style={{
               margin: "1rem",
@@ -568,12 +623,18 @@ function AppMobile() {
             >
               TAKEOFF YOUR CAREER WITH US!
             </p>
-            <p style={{ fontSize: "1.1rem", lineHeight: "2rem" }}>
+            <p
+              style={{
+                fontSize: "1.1rem",
+                lineHeight: "2rem",
+              }}
+            >
               Join us in one of our full time roles and see how you can takeoff
               your career to new heights. Stay connected to us about the current
               opportunities in technical writing and aircraft maintenance so
               that we can reach out to you.
             </p>
+
             <a href="#contact" style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
@@ -595,14 +656,17 @@ function AppMobile() {
             borderRadius: "8px",
           }}
         >
-          <h1 style={{ color: "#e4e4e4", fontSize: "3rem" }}>ABOUT US</h1>
+          <h1
+            style={{
+              color: "#e4e4e4",
+              fontSize: "3rem",
+              textAlign: "center",
+              marginBottom: "3rem",
+            }}
+          >
+            ABOUT US
+          </h1>
           <div style={{}}>
-            {/* <img
-              src={aboutimg}
-              alt=""
-              width={300}
-              style={{ marginRight: "1rem" }}
-            /> */}
             <div style={{ fontSize: "1rem", lineHeight: "2rem" }}>
               <p>
                 TakeOff Techno Solutions Pvt. Ltd (TOTSPL) is an aviation
@@ -639,7 +703,16 @@ function AppMobile() {
             marginTop: "6rem",
           }}
         >
-          <h1 style={{ color: "#e4e4e4", fontSize: "3rem" }}>CONTACT US</h1>
+          <h1
+            style={{
+              color: "#e4e4e4",
+              fontSize: "3rem",
+              textAlign: "center",
+              marginBottom: "3rem",
+            }}
+          >
+            CONTACT US
+          </h1>
           <p
             style={{
               marginBottom: "3rem",
@@ -880,19 +953,22 @@ function AppMobile() {
           backgroundColor: "#252B5D",
           padding: "1rem",
           color: "#fff",
+          marginTop: "4rem",
         }}
       >
         <p
           style={{
             fontSize: "1.4rem",
             textAlign: "center",
-            marginBottom: "3rem",
+            marginBottom: "4rem",
+            textTransform: "uppercase",
+            fontWeight: "500",
           }}
         >
           TakeOff Techno Solutions
         </p>
 
-        <div>
+        <div style={{ fontSize: "1.1rem" }}>
           <div
             style={{
               display: "flex",
@@ -902,7 +978,7 @@ function AppMobile() {
           >
             <div style={{ color: "white" }}>
               <MdLocationOn
-                style={{ marginRight: "5px" }}
+                style={{ marginRight: "10px" }}
                 size={20}
                 color="#e4e4e4"
               />
@@ -927,7 +1003,7 @@ function AppMobile() {
               }}
             >
               <IoMdMail
-                style={{ marginRight: "5px" }}
+                style={{ marginRight: "10px" }}
                 size={18}
                 color="#e4e4e4"
               />
@@ -947,7 +1023,7 @@ function AppMobile() {
             >
               <div style={{ color: "white" }}>
                 <FaPhoneAlt
-                  style={{ marginRight: "5px" }}
+                  style={{ marginRight: "10px" }}
                   size={16}
                   color="#e4e4e4"
                 />
@@ -1063,52 +1139,55 @@ function AppMobile() {
         onClose={() => setmodalvisible(false)}
         style={{ border: "none" }}
       >
-        <div
-          style={{
-            padding: "1.4rem",
-            backgroundColor: "#fff",
-            border: "none",
-            height: "60vh",
-            overflowY: "auto",
-            bottom: 0,
-            position: "absolute",
-            borderTopLeftRadius: "2rem",
-            borderTopRightRadius: "2rem",
-            paddingBottom: "3rem",
-          }}
-        >
+        <StyleRoot>
           <div
             style={{
-              display: "flex",
-              justifyContent: "right",
-              marginBottom: "1rem",
+              padding: "1.4rem",
+              backgroundColor: "#fff",
+              border: "none",
+              height: "60vh",
+              overflowY: "auto",
+              bottom: 0,
+              position: "absolute",
+              borderTopLeftRadius: "2rem",
+              borderTopRightRadius: "2rem",
+              paddingBottom: "3rem",
+              ...styles.slideOutDown,
             }}
           >
             <div
               style={{
-                backgroundColor: "#eef4fe",
-                height: 30,
-                width: 30,
                 display: "flex",
-                alignItems: "center",
-                borderRadius: 30,
-                justifyContent: "center",
+                justifyContent: "right",
+                marginBottom: "1rem",
               }}
-              onClick={() => setmodalvisible(false)}
             >
-              <FiX color="#eb483b" size={20} />
+              <div
+                style={{
+                  backgroundColor: "#f5f5f5",
+                  height: 30,
+                  width: 30,
+                  display: "flex",
+                  alignItems: "center",
+                  borderRadius: 30,
+                  justifyContent: "center",
+                }}
+                onClick={() => setmodalvisible(false)}
+              >
+                <FiX color="#eb483b" size={23} />
+              </div>
             </div>
+            {page === "Aircraft" ? (
+              <Aircraft />
+            ) : page === "Internship" ? (
+              <Internship />
+            ) : page === "Recruit" ? (
+              <Recruit />
+            ) : (
+              <TechnicalPub />
+            )}
           </div>
-          {page === "Aircraft" ? (
-            <Aircraft />
-          ) : page === "Internship" ? (
-            <Internship />
-          ) : page === "Recruit" ? (
-            <Recruit />
-          ) : (
-            <TechnicalPub />
-          )}
-        </div>
+        </StyleRoot>
       </Modal>
     </ThemeProvider>
   );

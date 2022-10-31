@@ -26,7 +26,16 @@ import {
 } from "react-icons/fa";
 import { GoPrimitiveDot } from "react-icons/go";
 import { RiStethoscopeLine } from "react-icons/ri";
-import { color } from "@mui/system";
+import {
+  fadeIn,
+  flip,
+  flipInX,
+  pulse,
+  swing,
+  zoomIn,
+  zoomInRight,
+} from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
 const Aircraft = () => {
   return (
@@ -274,6 +283,21 @@ const TechnicalPub = () => {
   );
 };
 
+const styles = {
+  zoomIn: {
+    animation: "x 4s",
+    animationName: Radium.keyframes(zoomInRight, "zoomInRight"),
+  },
+  pulse: {
+    animation: "x 5s",
+    animationName: Radium.keyframes(pulse, "pulse"),
+  },
+  swing: {
+    animation: "x 4s",
+    animationName: Radium.keyframes(flipInX, "flipInX"),
+  },
+};
+
 function App() {
   const theme = createTheme({
     palette: {
@@ -303,6 +327,7 @@ function App() {
         >
           <a>
             <div
+              className="socialHover"
               style={{
                 marginBottom: "1rem",
                 backgroundColor: "#252B5D",
@@ -319,6 +344,7 @@ function App() {
           </a>
           <a>
             <div
+              className="socialHover"
               style={{
                 marginBottom: "1rem",
                 backgroundColor: "#252B5D",
@@ -335,6 +361,7 @@ function App() {
           </a>
           <a>
             <div
+              className="socialHover"
               style={{
                 marginBottom: "1rem",
                 backgroundColor: "#252B5D",
@@ -351,6 +378,7 @@ function App() {
           </a>
           <a>
             <div
+              className="socialHover"
               style={{
                 marginBottom: "1rem",
                 backgroundColor: "#252B5D",
@@ -367,6 +395,7 @@ function App() {
           </a>
           <a>
             <div
+              className="socialHover"
               style={{
                 backgroundColor: "#252B5D",
                 padding: "5px",
@@ -516,11 +545,15 @@ function App() {
                 </Button>
               </a>
             </div>
-            <img
-              src={landingside}
-              alt=""
-              style={{ width: 500, transform: "scaleX(-1)" }}
-            />
+            <StyleRoot>
+              <div style={{ width: 500, ...styles.zoomIn }}>
+                <img
+                  src={landingside}
+                  alt=""
+                  style={{ width: 500, transform: "scaleX(-1)" }}
+                />
+              </div>
+            </StyleRoot>
           </div>
         </div>
       </div>
@@ -641,6 +674,8 @@ function App() {
                   color: page === 1 ? "#fff" : "#002366",
                   fontWeight: "500",
                   margin: 0,
+                  transitionDuration: "2s",
+                  transitionTimingFunction: "ease",
                 }}
               >
                 <FaFileAlt style={{ marginRight: 6 }} /> Technical Publication
@@ -667,6 +702,8 @@ function App() {
                   color: page === 2 ? "#fff" : "#002366",
                   fontWeight: "500",
                   margin: 0,
+                  transitionDuration: "2s",
+                  transitionTimingFunction: "ease",
                 }}
               >
                 <FaPlaneDeparture style={{ marginRight: 10 }} />
@@ -694,6 +731,8 @@ function App() {
                   color: page === 3 ? "#fff" : "#002366",
                   fontWeight: "500",
                   margin: 0,
+                  transitionDuration: "2s",
+                  transitionTimingFunction: "ease",
                 }}
               >
                 <FaBriefcase style={{ marginRight: 10 }} />
@@ -721,6 +760,8 @@ function App() {
                   color: page === 4 ? "#fff" : "#002366",
                   fontWeight: "500",
                   margin: 0,
+                  transitionDuration: "2s",
+                  transitionTimingFunction: "ease",
                 }}
               >
                 <FaUserTie style={{ marginRight: 10 }} />
@@ -750,6 +791,7 @@ function App() {
 
         {/* Career */}
         <h1
+          id="career"
           style={{
             color: "#e4e4e4",
             fontSize: "3rem",
@@ -768,16 +810,20 @@ function App() {
           }}
         >
           <div
-            id="career"
             style={{
               marginBottom: "6rem",
+              marginRight: "2rem",
               margin: "1rem",
               padding: "1rem",
               borderRadius: "8px",
             }}
           >
             <p
-              style={{ fontSize: "2rem", color: "#252B5D", fontWeight: "500" }}
+              style={{
+                fontSize: "2rem",
+                color: "#252B5D",
+                fontWeight: "500",
+              }}
             >
               TAKEOFF YOUR CAREER WITH US!
             </p>
@@ -797,7 +843,7 @@ function App() {
               </Button>
             </a>
           </div>
-          <img src={career} alt="" style={{ width: 400 }} />
+          <img src={career} alt="" style={{ width: 300 }} />
         </div>
 
         {/* about us */}
@@ -811,7 +857,11 @@ function App() {
           }}
         >
           <h1
-            style={{ color: "#e4e4e4", fontSize: "3rem", textAlign: "center" }}
+            style={{
+              color: "#e4e4e4",
+              fontSize: "3rem",
+              textAlign: "center",
+            }}
           >
             ABOUT US
           </h1>
@@ -909,22 +959,25 @@ function App() {
                       alignItems: "center",
                     }}
                   >
-                    <div
-                      style={{
-                        marginRight: 10,
-                        backgroundColor: "#e8eef8",
-                        color: "#002366",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: 30,
-                        width: 30,
-                        borderRadius: 30,
-                        boxShadow: "-5px 5px 10px -6px rgba(0,0,0,0.75)",
-                      }}
-                    >
-                      <MdLocationOn size={20} />
-                    </div>
+                    <StyleRoot>
+                      <div
+                        style={{
+                          marginRight: 10,
+                          backgroundColor: "#e8eef8",
+                          color: "#002366",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: 30,
+                          width: 30,
+                          borderRadius: 30,
+                          boxShadow: "-5px 5px 10px -6px rgba(0,0,0,0.75)",
+                          ...styles.swing,
+                        }}
+                      >
+                        <MdLocationOn size={20} />
+                      </div>
+                    </StyleRoot>
                     <div style={{ fontSize: "1.2rem", fontWeight: "500" }}>
                       Address
                     </div>
@@ -959,22 +1012,25 @@ function App() {
                       alignItems: "center",
                     }}
                   >
-                    <div
-                      style={{
-                        marginRight: 10,
-                        backgroundColor: "#e8eef8",
-                        color: "#002366",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: 30,
-                        width: 30,
-                        borderRadius: 30,
-                        boxShadow: "-5px 5px 10px -6px rgba(0,0,0,0.75)",
-                      }}
-                    >
-                      <IoMdMail size={16} />
-                    </div>
+                    <StyleRoot>
+                      <div
+                        style={{
+                          marginRight: 10,
+                          backgroundColor: "#e8eef8",
+                          color: "#002366",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: 30,
+                          width: 30,
+                          borderRadius: 30,
+                          boxShadow: "-5px 5px 10px -6px rgba(0,0,0,0.75)",
+                          ...styles.swing,
+                        }}
+                      >
+                        <IoMdMail size={16} />
+                      </div>
+                    </StyleRoot>
                     <div style={{ fontSize: "1.2rem", fontWeight: "500" }}>
                       E-mail
                     </div>
@@ -1002,23 +1058,31 @@ function App() {
                       alignItems: "center",
                     }}
                   >
+                    <StyleRoot>
+                      <div
+                        style={{
+                          marginRight: 10,
+                          backgroundColor: "#e8eef8",
+                          color: "#002366",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: 30,
+                          width: 30,
+                          borderRadius: 30,
+                          boxShadow: "-5px 5px 10px -6px rgba(0,0,0,0.75)",
+                          ...styles.swing,
+                        }}
+                      >
+                        <FaPhoneAlt size={16} />
+                      </div>
+                    </StyleRoot>
                     <div
                       style={{
-                        marginRight: 10,
-                        backgroundColor: "#e8eef8",
-                        color: "#002366",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: 30,
-                        width: 30,
-                        borderRadius: 30,
-                        boxShadow: "-5px 5px 10px -6px rgba(0,0,0,0.75)",
+                        fontSize: "1.2rem",
+                        fontWeight: "500",
                       }}
                     >
-                      <FaPhoneAlt size={16} />
-                    </div>
-                    <div style={{ fontSize: "1.2rem", fontWeight: "500" }}>
                       Contact No.
                     </div>
                   </div>
